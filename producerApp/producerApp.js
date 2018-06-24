@@ -2,7 +2,11 @@
 
 // Functions from figure
 const hfc = require('fabric-client');
+
+const target = [];
+const client = new hfc();
 let channel;
+
 const enrolUser = function(client, options) {
     return hfc.newDefaultKeyValueStore({ path: options.wallet_path })
         .then(wallet => {
@@ -20,7 +24,7 @@ const initNetwork = function(client, options, target) {
         channel.addPeer(peer);
         channel.addOrderer(client.newOrderer(options.orderer_url));
     } catch(e) { // channel already exists
-        channel = client.getChannel(options.channel_id);
+        channel= client.getChannel(options.channel_id);
     }
     return channel;
 };
@@ -47,8 +51,36 @@ const sendOrderer = function(channel, request) {
     return channel.sendTransaction(request);
 };
 
-const target = [];
-const client = new hfc();
+const initEventHub = function(client, eventUrl) {
+    const eh = client.newEventHub();
+    eh.setPeerAddr(eventUrl);
+    eh.connect();
+    return eh;
+};
+
+const catchEvent = function(eh, transactionID, timeout) {
+    return new Promise((resolve, reject) => {
+        const handle = setTimeout(
+            () => {
+                eh.unregisterTxEvent(transactionID);
+                eh.disconnect();
+                reject("Timed out");
+            },
+            timeout);
+
+        const txId = transactionID.getTransactionID();
+        eh.registerTxEvent(txId, (tx, code) => {
+            clearTimeout(handle);
+            eh.unregisterTxEvent(transactionID);
+            eh.disconnect();
+
+            if (code == 'VALID')
+                return resolve("Transaction is in a block.");
+            reject("Transaction is rejected. Code: " + code.toString());
+        });
+
+    });
+};
 
 // Function invokes createPC on pcxchg
 function invoke(opt, param) {
@@ -66,19 +98,25 @@ function invoke(opt, param) {
                 chainId: opt.channel_id,
                 txId: null
             };
-            return transactionProposal(client, channel, request);
-        })
-        .then(results => {
-            if (responseInspect(results)) {
-                const request = {
-                    proposalResponses: results[0],
-                    proposal: results[1],
-                    header: results[2]
-                };
-                return sendOrderer(channel, request);
-            } else {
-                throw "Response is bad";
-            }
+            return transactionProposal(client, channel, request)
+                .then(results => {
+                    if (responseInspect(results)) {
+                        const broadcastRequest = {
+                            proposalResponses: results[0],
+                            proposal: results[1],
+                            header: results[2]
+                        };
+
+                        let eh = initEventHub(client, opt.event_url);
+
+                        return Promise.all([
+                            sendOrderer(channel, broadcastRequest),
+                            catchEvent(eh, request.txId, 6000)
+                        ]);
+                    } else {
+                        throw "Bad Response";
+                    }
+                });
         })
         .catch(err => {
             console.log(err);
@@ -86,8 +124,7 @@ function invoke(opt, param) {
         });
 };
 
-// Options
-const options = {
+var options = {
     Asus : {
         wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
         user_id: 'AsusAdmin',
@@ -95,14 +132,16 @@ const options = {
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:7051',
         orderer_url: 'grpc://localhost:7050',
+        event_url: 'grpc://localhost:7053'
     },
-    HP : {
+    Hp : {
         wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
-        user_id: 'HPAdmin',
+        user_id: 'HpAdmin',
         channel_id: 'hp',
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:9051',
-        orderer_url: 'grpc://localhost:7050'
+        orderer_url: 'grpc://localhost:7050',
+        event_url: 'grpc://localhost:9053'
     },
     Dell : {
         wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
@@ -110,10 +149,10 @@ const options = {
         channel_id: 'dell',
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:10051',
-        orderer_url: 'grpc://localhost:7050'
+        orderer_url: 'grpc://localhost:7050',
+        event_url: 'grpc://localhost:10053'
     }
 };
-
 
 // Server
 const express = require("express");
@@ -133,7 +172,7 @@ app.set('views', __dirname);
 app.post('/invoke', function(req, res, next) {
     const args = req.body.args;
     invoke(options[args[0]], args.slice(1))
-        .then(() => res.send("Chaincode invoked"))
+        .then(result => res.send(result))
         .catch(err => {
             res.status(500);
             res.send(err.toString());
@@ -141,5 +180,5 @@ app.post('/invoke', function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-    res.render('buyPc.html');
+    res.render('UI.html');
 });
