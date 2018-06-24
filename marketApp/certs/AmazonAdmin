@@ -1,0 +1,13 @@
+{
+   "name": "AmazonAdmin",
+   "mspid": "AmazonMSP",
+   "roles": null,
+   "affiliation": "",
+   "enrollmentSecret": "",
+   "enrollment": {
+      "signingIdentity": "fe7596b72a4f4eb801bc316fde12177e9c87747cc3d95068f9000adc657f39b5",
+      "identity": {
+         "certificate": "-----BEGIN CERTIFICATE-----\nMIICBjCCAa2gAwIBAgIQT+EmeVw6k0Xzm/ugDCjfiDAKBggqhkjOPQQDAjBnMQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzETMBEGA1UEChMKQW1hem9uLmNvbTEWMBQGA1UEAxMNY2EuQW1hem9u\nLmNvbTAeFw0xODA2MTgxNjA5MTVaFw0yODA2MTUxNjA5MTVaMFUxCzAJBgNVBAYT\nAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1TYW4gRnJhbmNpc2Nv\nMRkwFwYDVQQDDBBBZG1pbkBBbWF6b24uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D\nAQcDQgAEwby5D0pTC8XnJ0aUbzsAizoGLHyCBEjPMKT4YwfTn7LVZdvLsUUMNxgl\nn+266a8yys1SbqwYBbs78pfa4FbFhqNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1Ud\nEwEB/wQCMAAwKwYDVR0jBCQwIoAg1oPZoeulMHRXZazt8yZPXetSl6DS/L4Xi9Fy\nfCauH5owCgYIKoZIzj0EAwIDRwAwRAIgQaMNeS5vhihDrzvX1HjsVjCGHb2LA+Db\n1VWjUI60M0QCIBcSnxFPkfl+ln5e8chL8PqcUdEeLdL9jmUARPBdQVGN\n-----END CERTIFICATE-----\n"
+      }
+   }
+}
