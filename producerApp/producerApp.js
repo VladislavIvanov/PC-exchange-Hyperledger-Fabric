@@ -7,6 +7,30 @@ const target = [];
 const client = new hfc();
 let channel;
 
+const ca = require('fabric-ca-client');
+const User = require('fabric-client/lib/User.js');
+
+const enrolUserCA = function(client, opt) {
+    // Create the ca client
+    const caClient = new ca(opt.ca_url, null, '');
+
+    return hfc.newDefaultKeyValueStore({ path: opt.wallet_path })
+        .then(wallet => {
+            client.setStateStore(wallet);
+            return caClient.enroll({
+                enrollmentID: "admin",
+                enrollmentSecret: "adminpw"
+            });
+        })
+        .then(enrollment => {
+            const admin = new User("admin");
+            admin.setCryptoSuite(client.getCryptoSuite());
+            return admin.setEnrollment(enrollment.key, enrollment.certificate, opt.msp)
+                .then(() => client.setUserContext(admin))
+                .then(() => admin);
+        });
+};
+
 const enrolUser = function(client, options) {
     return hfc.newDefaultKeyValueStore({ path: options.wallet_path })
         .then(wallet => {
@@ -84,7 +108,7 @@ const catchEvent = function(eh, transactionID, timeout) {
 
 // Function invokes createPC on pcxchg
 function invoke(opt, param) {
-    return enrolUser(client, opt)
+    return enrolUserCA(client, opt)
         .then(user => {
             if(typeof user === "undefined" || !user.isEnrolled())
                 throw "User not enrolled";
@@ -126,31 +150,37 @@ function invoke(opt, param) {
 
 var options = {
     Asus : {
-        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
+        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs/asus',
         user_id: 'AsusAdmin',
         channel_id: 'asus',
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:7051',
         orderer_url: 'grpc://localhost:7050',
-        event_url: 'grpc://localhost:7053'
+        event_url: 'grpc://localhost:7053',
+        ca_url: 'http://localhost:8054',
+        msp: `AsusMSP`
     },
     Hp : {
-        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
+        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs/hp',
         user_id: 'HpAdmin',
         channel_id: 'hp',
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:9051',
         orderer_url: 'grpc://localhost:7050',
-        event_url: 'grpc://localhost:9053'
+        event_url: 'grpc://localhost:9053',
+        ca_url: 'http://localhost:9054',
+        msp: `HPMSP`
     },
     Dell : {
-        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs',
+        wallet_path: '/Users/vladislavivanov/HLF/pcxchg/producerApp/certs/dell',
         user_id: 'DellAdmin',
         channel_id: 'dell',
         chaincode_id: 'pcxchg',
         peer_url: 'grpc://localhost:10051',
         orderer_url: 'grpc://localhost:7050',
-        event_url: 'grpc://localhost:10053'
+        event_url: 'grpc://localhost:10053',
+        ca_url: 'http://localhost:10054',
+        msp: `DellMSP`
     }
 };
 
