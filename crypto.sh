@@ -30,7 +30,7 @@ SERVER=$FCAHOME/bin/fabric-ca-server
 CLIENT=$FCAHOME/bin/fabric-ca-client
 
 # Crypto-config directory
-CDIR="crypto-config"
+CDIR="__crypto-config"
 
 # More verbose logging for fabric-ca-server & fabric-ca-client
 DEBUG=-d

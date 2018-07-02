@@ -1,0 +1,306 @@
+2018/07/02 15:26:39 [INFO] Created default configuration file at /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server-config.yaml
+2018/07/02 15:26:39 [INFO] Starting server in home directory: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root
+2018/07/02 15:26:39 [INFO] Server Version: 1.1.1-snapshot-e656889
+2018/07/02 15:26:39 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/02 15:26:39 [DEBUG] Making server filenames absolute
+2018/07/02 15:26:39 [DEBUG] Initializing default CA in directory /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root
+2018/07/02 15:26:39 [DEBUG] Init CA with home /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root and config {Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:<nil> CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:39 [DEBUG] CA Home Directory: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root
+2018/07/02 15:26:39 [DEBUG] Checking configuration file version '1.1.1-snapshot-e656889' against server version: '1.1.1-snapshot-e656889'
+2018/07/02 15:26:39 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420330840 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/02 15:26:39 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420345000 DummyKeystore:<nil>}
+2018/07/02 15:26:39 [DEBUG] Initialize key material
+2018/07/02 15:26:39 [DEBUG] Making CA filenames absolute
+2018/07/02 15:26:39 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d40 CA:0xc4202c7b80 SerialNumber:}
+2018/07/02 15:26:39 [INFO] generating key: &{A:ecdsa S:256}
+2018/07/02 15:26:39 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/07/02 15:26:39 [INFO] encoded CSR
+2018/07/02 15:26:39 [DEBUG] validating configuration
+2018/07/02 15:26:39 [DEBUG] validate local profile
+2018/07/02 15:26:39 [DEBUG] profile is valid
+2018/07/02 15:26:39 [INFO] signed certificate with serial number 200045757416576705969080132288656375538641547119
+2018/07/02 15:26:39 [INFO] The CA key and certificate were generated for CA 
+2018/07/02 15:26:39 [INFO] The key was stored by BCCSP provider 'SW'
+2018/07/02 15:26:39 [INFO] The certificate is at: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem
+2018/07/02 15:26:39 [DEBUG] Initializing DB
+2018/07/02 15:26:39 [DEBUG] Initializing 'sqlite3' database at '/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db'
+2018/07/02 15:26:39 [DEBUG] Using sqlite database, connect to database in home (/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db) directory
+2018/07/02 15:26:39 [DEBUG] Creating SQLite database (/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db) if it does not exist...
+2018/07/02 15:26:39 [DEBUG] Creating users table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Creating affiliations table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Creating certificates table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Creating properties table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Successfully opened sqlite3 DB
+2018/07/02 15:26:39 [DEBUG] Checking database schema...
+2018/07/02 15:26:39 [DEBUG] Update SQLite schema, if using outdated schema
+2018/07/02 15:26:39 [DEBUG] Upgrade identities table
+2018/07/02 15:26:39 [DEBUG] Creating users table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Upgrade affiliation table
+2018/07/02 15:26:39 [DEBUG] Creating affiliations table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Upgrade certificates table
+2018/07/02 15:26:39 [DEBUG] Creating certificates table if it does not exist
+2018/07/02 15:26:39 [DEBUG] Initializing identity registry
+2018/07/02 15:26:39 [DEBUG] Initialized DB identity registry
+2018/07/02 15:26:39 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2018/07/02 15:26:39 [DEBUG] Checking database levels 'map[affiliation.level:0 certificate.level:0 identity.level:0]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
+2018/07/02 15:26:39 [DEBUG] Loading identity table
+2018/07/02 15:26:39 [DEBUG] Loading identity 'admin'
+2018/07/02 15:26:39 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:39 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:39 [DEBUG] DB: Add identity admin
+2018/07/02 15:26:39 [DEBUG] Successfully added identity admin to the database
+2018/07/02 15:26:39 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }
+2018/07/02 15:26:39 [DEBUG] Successfully loaded identity table
+2018/07/02 15:26:39 [DEBUG] Loading affiliations table
+2018/07/02 15:26:39 [DEBUG] DB: Add affiliation org2
+2018/07/02 15:26:39 [DEBUG] Affiliation 'org2' added
+2018/07/02 15:26:39 [DEBUG] DB: Add affiliation org2.department1
+2018/07/02 15:26:39 [DEBUG] Affiliation 'org2.department1' added
+2018/07/02 15:26:39 [DEBUG] DB: Add affiliation org1
+2018/07/02 15:26:39 [DEBUG] Affiliation 'org1' added
+2018/07/02 15:26:39 [DEBUG] DB: Add affiliation org1.department1
+2018/07/02 15:26:39 [DEBUG] Affiliation 'org1.department1' added
+2018/07/02 15:26:39 [DEBUG] DB: Add affiliation org1.department2
+2018/07/02 15:26:39 [DEBUG] Affiliation 'org1.department2' added
+2018/07/02 15:26:39 [DEBUG] Successfully loaded affiliations table
+2018/07/02 15:26:39 [DEBUG] Checking and performing migration, if needed
+2018/07/02 15:26:39 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/02 15:26:39 [INFO] Initialized sqlite3 database at /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db
+2018/07/02 15:26:39 [DEBUG] Initializing enrollment signer
+2018/07/02 15:26:39 [DEBUG] validating configuration
+2018/07/02 15:26:39 [DEBUG] validate local profile
+2018/07/02 15:26:39 [DEBUG] profile is valid
+2018/07/02 15:26:39 [DEBUG] validate local profile
+2018/07/02 15:26:39 [DEBUG] profile is valid
+2018/07/02 15:26:39 [DEBUG] validate local profile
+2018/07/02 15:26:39 [DEBUG] profile is valid
+2018/07/02 15:26:39 [DEBUG] CA initialization successful
+2018/07/02 15:26:39 [INFO] Home directory for default CA: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root
+2018/07/02 15:26:39 [DEBUG] 1 CA instance(s) running on server
+2018/07/02 15:26:39 [INFO] Listening on http://0.0.0.0:7108
+2018/07/02 15:26:40 [DEBUG] Received request for /enroll
+2018/07/02 15:26:40 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:40 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:40 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
+2018/07/02 15:26:40 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:40 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:40 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:40 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:40 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:40 [DEBUG] Finished processing sign request
+2018/07/02 15:26:40 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:40 [INFO] signed certificate with serial number 493056249751218577762210056515135172527439120125
+2018/07/02 15:26:40 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:40 [DEBUG] Saved serial number as hex 565d682a8cea58c088a77ed663441f8be49286fd
+2018/07/02 15:26:40 [DEBUG] saved certificate with serial number 493056249751218577762210056515135172527439120125
+2018/07/02 15:26:40 [DEBUG] Successfully incremented state for identity admin to 1
+2018/07/02 15:26:40 [INFO] 127.0.0.1:65409 POST /enroll 201 0 "OK"
+2018/07/02 15:26:40 [DEBUG] Received request for /enroll
+2018/07/02 15:26:40 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:40 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:40 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
+2018/07/02 15:26:41 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:41 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:41 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:41 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] Finished processing sign request
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [INFO] signed certificate with serial number 508389890686532753805124865084151581152366354651
+2018/07/02 15:26:41 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:41 [DEBUG] Saved serial number as hex 590cfdbb4afeb1b1292f5b36ae9a0e1730e0e0db
+2018/07/02 15:26:41 [DEBUG] saved certificate with serial number 508389890686532753805124865084151581152366354651
+2018/07/02 15:26:41 [DEBUG] Successfully incremented state for identity admin to 2
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65416 POST /enroll 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /register
+2018/07/02 15:26:41 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:41 [DEBUG] DB: Get certificate by serial (590cfdbb4afeb1b1292f5b36ae9a0e1730e0e0db) and aki (e676e3d386142209b8a4ec3b7607d8991bddb52b)
+2018/07/02 15:26:41 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:41 [DEBUG] Received registration request from admin: { Name:nodeAdmin Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:41 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:41 [DEBUG] Validate Affiliation
+2018/07/02 15:26:41 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:41 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:41 [DEBUG] Validate ID
+2018/07/02 15:26:41 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:41 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:41 [DEBUG] Registering user id: nodeAdmin
+2018/07/02 15:26:41 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:41 [DEBUG] DB: Add identity nodeAdmin
+2018/07/02 15:26:41 [DEBUG] Successfully added identity nodeAdmin to the database
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65419 POST /register 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /enroll
+2018/07/02 15:26:41 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:41 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
+2018/07/02 15:26:41 [DEBUG] DB: identity nodeAdmin successfully logged in
+2018/07/02 15:26:41 [DEBUG] Processing sign request: id=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
+2018/07/02 15:26:41 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:41 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:41 [DEBUG] Finished processing sign request
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:41 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [INFO] signed certificate with serial number 714757567978828605215453475184525083728210979688
+2018/07/02 15:26:41 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:41 [DEBUG] Saved serial number as hex 7d32d67c6a9e21ee17f39ea52100f758c91a6b68
+2018/07/02 15:26:41 [DEBUG] saved certificate with serial number 714757567978828605215453475184525083728210979688
+2018/07/02 15:26:41 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65422 POST /enroll 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /register
+2018/07/02 15:26:41 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:41 [DEBUG] DB: Get certificate by serial (590cfdbb4afeb1b1292f5b36ae9a0e1730e0e0db) and aki (e676e3d386142209b8a4ec3b7607d8991bddb52b)
+2018/07/02 15:26:41 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:41 [DEBUG] Received registration request from admin: { Name:User1@Dell.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:41 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:41 [DEBUG] Validate Affiliation
+2018/07/02 15:26:41 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:41 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:41 [DEBUG] Validate ID
+2018/07/02 15:26:41 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:41 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:41 [DEBUG] Registering user id: User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] DB: Add identity User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] Successfully added identity User1@Dell.com to the database
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65425 POST /register 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /enroll
+2018/07/02 15:26:41 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] DB: Login user User1@Dell.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:41 [DEBUG] DB: identity User1@Dell.com successfully logged in
+2018/07/02 15:26:41 [DEBUG] Processing sign request: id=User1@Dell.com, CommonName=User1@Dell.com, Subject=<nil>
+2018/07/02 15:26:41 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:41 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] Finished processing sign request
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity User1@Dell.com
+2018/07/02 15:26:41 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2255736572314044656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2255736572314044656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [INFO] signed certificate with serial number 278943801483089196230677188766835919731705287955
+2018/07/02 15:26:41 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:41 [DEBUG] Saved serial number as hex 30dc45cd19c5036b55c8459c49076615bcc09513
+2018/07/02 15:26:41 [DEBUG] saved certificate with serial number 278943801483089196230677188766835919731705287955
+2018/07/02 15:26:41 [DEBUG] Successfully incremented state for identity User1@Dell.com to 1
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65428 POST /enroll 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /enroll
+2018/07/02 15:26:41 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
+2018/07/02 15:26:41 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:41 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:41 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:41 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] Finished processing sign request
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [INFO] signed certificate with serial number 398915554903880630366028598628891768866237285723
+2018/07/02 15:26:41 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:41 [DEBUG] Saved serial number as hex 45dffdfd1c936a51422033649486705694e3855b
+2018/07/02 15:26:41 [DEBUG] saved certificate with serial number 398915554903880630366028598628891768866237285723
+2018/07/02 15:26:41 [DEBUG] Successfully incremented state for identity admin to 3
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65431 POST /enroll 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /register
+2018/07/02 15:26:41 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:41 [DEBUG] DB: Get certificate by serial (590cfdbb4afeb1b1292f5b36ae9a0e1730e0e0db) and aki (e676e3d386142209b8a4ec3b7607d8991bddb52b)
+2018/07/02 15:26:41 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:41 [DEBUG] Received registration request from admin: { Name:peer0.Dell.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:41 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:41 [DEBUG] Validate Affiliation
+2018/07/02 15:26:41 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:41 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:41 [DEBUG] Validate ID
+2018/07/02 15:26:41 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:41 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:41 [DEBUG] Registering user id: peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] DB: Add identity peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] Successfully added identity peer0.Dell.com to the database
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65434 POST /register 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /enroll
+2018/07/02 15:26:41 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] DB: Login user peer0.Dell.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:41 [DEBUG] DB: identity peer0.Dell.com successfully logged in
+2018/07/02 15:26:41 [DEBUG] Processing sign request: id=peer0.Dell.com, CommonName=peer0.Dell.com, Subject=<nil>
+2018/07/02 15:26:41 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:41 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] Finished processing sign request
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity peer0.Dell.com
+2018/07/02 15:26:41 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e44656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e44656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:41 [INFO] signed certificate with serial number 138915023048075663615288931726118910282824306826
+2018/07/02 15:26:41 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:41 [DEBUG] Saved serial number as hex 18552a4217e931e8cfaa439a1e20c41b3d5a508a
+2018/07/02 15:26:41 [DEBUG] saved certificate with serial number 138915023048075663615288931726118910282824306826
+2018/07/02 15:26:41 [DEBUG] Successfully incremented state for identity peer0.Dell.com to 1
+2018/07/02 15:26:41 [INFO] 127.0.0.1:65437 POST /enroll 201 0 "OK"
+2018/07/02 15:26:41 [DEBUG] Received request for /enroll
+2018/07/02 15:26:41 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:41 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:41 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
+2018/07/02 15:26:42 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:42 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:42 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:42 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:42 [DEBUG] Finished processing sign request
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:42 [INFO] signed certificate with serial number 329098910410396954181761677900127581369137771718
+2018/07/02 15:26:42 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:42 [DEBUG] Saved serial number as hex 39a54e371f7b92708add72b2576088f0a51a34c6
+2018/07/02 15:26:42 [DEBUG] saved certificate with serial number 329098910410396954181761677900127581369137771718
+2018/07/02 15:26:42 [DEBUG] Successfully incremented state for identity admin to 4
+2018/07/02 15:26:42 [INFO] 127.0.0.1:65445 POST /enroll 201 0 "OK"
+2018/07/02 15:26:42 [DEBUG] Received request for /register
+2018/07/02 15:26:42 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:42 [DEBUG] DB: Get certificate by serial (590cfdbb4afeb1b1292f5b36ae9a0e1730e0e0db) and aki (e676e3d386142209b8a4ec3b7607d8991bddb52b)
+2018/07/02 15:26:42 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:42 [DEBUG] Received registration request from admin: { Name:peer1.Dell.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:42 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:42 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:42 [DEBUG] Validate Affiliation
+2018/07/02 15:26:42 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:42 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:42 [DEBUG] Validate ID
+2018/07/02 15:26:42 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:42 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:42 [DEBUG] Registering user id: peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] DB: Add identity peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] Successfully added identity peer1.Dell.com to the database
+2018/07/02 15:26:42 [INFO] 127.0.0.1:65448 POST /register 201 0 "OK"
+2018/07/02 15:26:42 [DEBUG] Received request for /enroll
+2018/07/02 15:26:42 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/ca-chain.pem} Signing:0xc420335850 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420348d20 CA:0xc4202c7b80 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Dell.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4203307e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] DB: Login user peer1.Dell.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:42 [DEBUG] DB: identity peer1.Dell.com successfully logged in
+2018/07/02 15:26:42 [DEBUG] Processing sign request: id=peer1.Dell.com, CommonName=peer1.Dell.com, Subject=<nil>
+2018/07/02 15:26:42 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:42 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] Finished processing sign request
+2018/07/02 15:26:42 [DEBUG] DB: Getting identity peer1.Dell.com
+2018/07/02 15:26:42 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e44656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:42 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e44656c6c2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:42 [INFO] signed certificate with serial number 694115910939643647832620284409949502378617082935
+2018/07/02 15:26:42 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:42 [DEBUG] Saved serial number as hex 79953be250445830c6bc3d4dcded1d350b201437
+2018/07/02 15:26:42 [DEBUG] saved certificate with serial number 694115910939643647832620284409949502378617082935
+2018/07/02 15:26:42 [DEBUG] Successfully incremented state for identity peer1.Dell.com to 1
+2018/07/02 15:26:42 [INFO] 127.0.0.1:65451 POST /enroll 201 0 "OK"
+2018/07/02 15:26:42 [DEBUG] Received request for /cainfo
+2018/07/02 15:26:42 [INFO] 127.0.0.1:65454 POST /cainfo 200 0 "OK"

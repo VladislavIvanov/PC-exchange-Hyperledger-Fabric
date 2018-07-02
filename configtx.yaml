@@ -1,14 +1,10 @@
 Profiles:
 
     PCXCHGOrdererGenesis:
-        Capabilities:
-            <<: *ChannelCapabilities
         Orderer:
             <<: *OrdererDefaults
             Organizations:
                 - *OrdererOrg
-            Capabilities:
-                <<: *OrdererCapabilities
         Consortiums:
             PCXCHG:
                 Organizations:
@@ -24,8 +20,6 @@ Profiles:
             Organizations:
                 - *Asus
                 - *Amazon
-            Capabilities:
-                <<: *ApplicationCapabilities
     DellChannel:
         Consortium: PCXCHG
         Application:
@@ -33,8 +27,6 @@ Profiles:
             Organizations:
                 - *Dell
                 - *Amazon
-            Capabilities:
-                <<: *ApplicationCapabilities
     HPChannel:
         Consortium: PCXCHG
         Application:
@@ -42,8 +34,7 @@ Profiles:
             Organizations:
                 - *HP
                 - *Amazon
-            Capabilities:
-                <<: *ApplicationCapabilities
+
 Organizations:
 
     - &OrdererOrg
@@ -93,10 +84,12 @@ Organizations:
               Port: 7051
 
 Orderer: &OrdererDefaults
-    OrdererType: solo
+    OrdererType: kafka
 
     Addresses:
-        - orderer.pcxchg.com:7050
+        - orderer0.pcxchg.com:7050
+        - orderer1.pcxchg.com:7050
+        - orderer2.pcxchg.com:7050
 
     BatchTimeout: 2s
 
@@ -106,19 +99,16 @@ Orderer: &OrdererDefaults
         AbsoluteMaxBytes: 99 MB
         PreferredMaxBytes: 512 KB
 
+
+    Kafka:
+        Brokers:
+            - kafka0:9092
+            - kafka1:9092
+            - kafka2:9092
+            - kafka3:9092
+
     Organizations:
 
 
 Application: &ApplicationDefaults
     Organizations:
-
-Capabilities:
-
-    Global: &ChannelCapabilities
-        V1_1: true
-
-    Orderer: &OrdererCapabilities
-        V1_1: true
-
-    Application: &ApplicationCapabilities
-        V1_1: true

@@ -1,0 +1,306 @@
+2018/07/02 15:26:31 [INFO] Created default configuration file at /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server-config.yaml
+2018/07/02 15:26:31 [INFO] Starting server in home directory: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root
+2018/07/02 15:26:31 [INFO] Server Version: 1.1.1-snapshot-e656889
+2018/07/02 15:26:31 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/02 15:26:31 [DEBUG] Making server filenames absolute
+2018/07/02 15:26:31 [DEBUG] Initializing default CA in directory /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root
+2018/07/02 15:26:31 [DEBUG] Init CA with home /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root and config {Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:<nil> CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:31 [DEBUG] CA Home Directory: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root
+2018/07/02 15:26:31 [DEBUG] Checking configuration file version '1.1.1-snapshot-e656889' against server version: '1.1.1-snapshot-e656889'
+2018/07/02 15:26:31 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc42032a600 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/02 15:26:31 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc42032fd20 DummyKeystore:<nil>}
+2018/07/02 15:26:31 [DEBUG] Initialize key material
+2018/07/02 15:26:31 [DEBUG] Making CA filenames absolute
+2018/07/02 15:26:31 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344ce0 CA:0xc4202c3200 SerialNumber:}
+2018/07/02 15:26:31 [INFO] generating key: &{A:ecdsa S:256}
+2018/07/02 15:26:31 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/07/02 15:26:31 [INFO] encoded CSR
+2018/07/02 15:26:31 [DEBUG] validating configuration
+2018/07/02 15:26:31 [DEBUG] validate local profile
+2018/07/02 15:26:31 [DEBUG] profile is valid
+2018/07/02 15:26:31 [INFO] signed certificate with serial number 706613629684535815584552155904318981245625800691
+2018/07/02 15:26:31 [INFO] The CA key and certificate were generated for CA 
+2018/07/02 15:26:31 [INFO] The key was stored by BCCSP provider 'SW'
+2018/07/02 15:26:31 [INFO] The certificate is at: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem
+2018/07/02 15:26:31 [DEBUG] Initializing DB
+2018/07/02 15:26:31 [DEBUG] Initializing 'sqlite3' database at '/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db'
+2018/07/02 15:26:31 [DEBUG] Using sqlite database, connect to database in home (/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db) directory
+2018/07/02 15:26:31 [DEBUG] Creating SQLite database (/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db) if it does not exist...
+2018/07/02 15:26:31 [DEBUG] Creating users table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Creating affiliations table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Creating certificates table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Creating properties table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Successfully opened sqlite3 DB
+2018/07/02 15:26:31 [DEBUG] Checking database schema...
+2018/07/02 15:26:31 [DEBUG] Update SQLite schema, if using outdated schema
+2018/07/02 15:26:31 [DEBUG] Upgrade identities table
+2018/07/02 15:26:31 [DEBUG] Creating users table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Upgrade affiliation table
+2018/07/02 15:26:31 [DEBUG] Creating affiliations table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Upgrade certificates table
+2018/07/02 15:26:31 [DEBUG] Creating certificates table if it does not exist
+2018/07/02 15:26:31 [DEBUG] Initializing identity registry
+2018/07/02 15:26:31 [DEBUG] Initialized DB identity registry
+2018/07/02 15:26:31 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2018/07/02 15:26:31 [DEBUG] Checking database levels 'map[affiliation.level:0 certificate.level:0 identity.level:0]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
+2018/07/02 15:26:31 [DEBUG] Loading identity table
+2018/07/02 15:26:31 [DEBUG] Loading identity 'admin'
+2018/07/02 15:26:31 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:31 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:31 [DEBUG] DB: Add identity admin
+2018/07/02 15:26:31 [DEBUG] Successfully added identity admin to the database
+2018/07/02 15:26:31 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }
+2018/07/02 15:26:31 [DEBUG] Successfully loaded identity table
+2018/07/02 15:26:31 [DEBUG] Loading affiliations table
+2018/07/02 15:26:31 [DEBUG] DB: Add affiliation org2
+2018/07/02 15:26:31 [DEBUG] Affiliation 'org2' added
+2018/07/02 15:26:31 [DEBUG] DB: Add affiliation org2.department1
+2018/07/02 15:26:31 [DEBUG] Affiliation 'org2.department1' added
+2018/07/02 15:26:31 [DEBUG] DB: Add affiliation org1
+2018/07/02 15:26:31 [DEBUG] Affiliation 'org1' added
+2018/07/02 15:26:31 [DEBUG] DB: Add affiliation org1.department1
+2018/07/02 15:26:31 [DEBUG] Affiliation 'org1.department1' added
+2018/07/02 15:26:31 [DEBUG] DB: Add affiliation org1.department2
+2018/07/02 15:26:31 [DEBUG] Affiliation 'org1.department2' added
+2018/07/02 15:26:31 [DEBUG] Successfully loaded affiliations table
+2018/07/02 15:26:31 [DEBUG] Checking and performing migration, if needed
+2018/07/02 15:26:31 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/02 15:26:31 [INFO] Initialized sqlite3 database at /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db
+2018/07/02 15:26:31 [DEBUG] Initializing enrollment signer
+2018/07/02 15:26:31 [DEBUG] validating configuration
+2018/07/02 15:26:31 [DEBUG] validate local profile
+2018/07/02 15:26:31 [DEBUG] profile is valid
+2018/07/02 15:26:31 [DEBUG] validate local profile
+2018/07/02 15:26:31 [DEBUG] profile is valid
+2018/07/02 15:26:31 [DEBUG] validate local profile
+2018/07/02 15:26:31 [DEBUG] profile is valid
+2018/07/02 15:26:31 [DEBUG] CA initialization successful
+2018/07/02 15:26:31 [INFO] Home directory for default CA: /Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root
+2018/07/02 15:26:31 [DEBUG] 1 CA instance(s) running on server
+2018/07/02 15:26:31 [INFO] Listening on http://0.0.0.0:7102
+2018/07/02 15:26:32 [DEBUG] Received request for /enroll
+2018/07/02 15:26:32 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
+2018/07/02 15:26:32 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:32 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:32 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:32 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [DEBUG] Finished processing sign request
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [INFO] signed certificate with serial number 44405407391574931360745365154774841757258696140
+2018/07/02 15:26:32 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:32 [DEBUG] Saved serial number as hex 7c73513d63ed88fc77fb181df8f311cb7d345cc
+2018/07/02 15:26:32 [DEBUG] saved certificate with serial number 44405407391574931360745365154774841757258696140
+2018/07/02 15:26:32 [DEBUG] Successfully incremented state for identity admin to 1
+2018/07/02 15:26:32 [INFO] 127.0.0.1:65258 POST /enroll 201 0 "OK"
+2018/07/02 15:26:32 [DEBUG] Received request for /enroll
+2018/07/02 15:26:32 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
+2018/07/02 15:26:32 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:32 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:32 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:32 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [DEBUG] Finished processing sign request
+2018/07/02 15:26:32 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:32 [INFO] signed certificate with serial number 624564071021248449679052507960063649400546968477
+2018/07/02 15:26:32 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:32 [DEBUG] Saved serial number as hex 6d666beb07b5dd72ce504086f324fe88cfa4c39d
+2018/07/02 15:26:32 [DEBUG] saved certificate with serial number 624564071021248449679052507960063649400546968477
+2018/07/02 15:26:32 [DEBUG] Successfully incremented state for identity admin to 2
+2018/07/02 15:26:32 [INFO] 127.0.0.1:65261 POST /enroll 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /register
+2018/07/02 15:26:33 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:33 [DEBUG] DB: Get certificate by serial (6d666beb07b5dd72ce504086f324fe88cfa4c39d) and aki (53a6d0de88f1d1366000e01b2041db026b791a6b)
+2018/07/02 15:26:33 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:33 [DEBUG] Received registration request from admin: { Name:nodeAdmin Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:33 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:33 [DEBUG] Validate Affiliation
+2018/07/02 15:26:33 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:33 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:33 [DEBUG] Validate ID
+2018/07/02 15:26:33 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:33 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:33 [DEBUG] Registering user id: nodeAdmin
+2018/07/02 15:26:33 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:33 [DEBUG] DB: Add identity nodeAdmin
+2018/07/02 15:26:33 [DEBUG] Successfully added identity nodeAdmin to the database
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65264 POST /register 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /enroll
+2018/07/02 15:26:33 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:33 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
+2018/07/02 15:26:33 [DEBUG] DB: identity nodeAdmin successfully logged in
+2018/07/02 15:26:33 [DEBUG] Processing sign request: id=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
+2018/07/02 15:26:33 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:33 [DEBUG] Finished processing sign request
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/02 15:26:33 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [INFO] signed certificate with serial number 584661070206643848385447952643177934610386893664
+2018/07/02 15:26:33 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:33 [DEBUG] Saved serial number as hex 66691beeef1e569ee2b7bc1390ac0e1e3787bb60
+2018/07/02 15:26:33 [DEBUG] saved certificate with serial number 584661070206643848385447952643177934610386893664
+2018/07/02 15:26:33 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65267 POST /enroll 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /register
+2018/07/02 15:26:33 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:33 [DEBUG] DB: Get certificate by serial (6d666beb07b5dd72ce504086f324fe88cfa4c39d) and aki (53a6d0de88f1d1366000e01b2041db026b791a6b)
+2018/07/02 15:26:33 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:33 [DEBUG] Received registration request from admin: { Name:User1@Asus.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:33 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:33 [DEBUG] Validate Affiliation
+2018/07/02 15:26:33 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:33 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:33 [DEBUG] Validate ID
+2018/07/02 15:26:33 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:33 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:33 [DEBUG] Registering user id: User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] DB: Add identity User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] Successfully added identity User1@Asus.com to the database
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65270 POST /register 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /enroll
+2018/07/02 15:26:33 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] DB: Login user User1@Asus.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:33 [DEBUG] DB: identity User1@Asus.com successfully logged in
+2018/07/02 15:26:33 [DEBUG] Processing sign request: id=User1@Asus.com, CommonName=User1@Asus.com, Subject=<nil>
+2018/07/02 15:26:33 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] Finished processing sign request
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity User1@Asus.com
+2018/07/02 15:26:33 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [INFO] signed certificate with serial number 36962143938731519856990420286523588682764087930
+2018/07/02 15:26:33 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:33 [DEBUG] Saved serial number as hex 679709a7c536b9785ee83451fa15eaa62c9727a
+2018/07/02 15:26:33 [DEBUG] saved certificate with serial number 36962143938731519856990420286523588682764087930
+2018/07/02 15:26:33 [DEBUG] Successfully incremented state for identity User1@Asus.com to 1
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65277 POST /enroll 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /enroll
+2018/07/02 15:26:33 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
+2018/07/02 15:26:33 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:33 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:33 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] Finished processing sign request
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [INFO] signed certificate with serial number 184121151548195252445591569548137260401035283523
+2018/07/02 15:26:33 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:33 [DEBUG] Saved serial number as hex 20404729c78cf36143ef9f565ff4d064a01f8c43
+2018/07/02 15:26:33 [DEBUG] saved certificate with serial number 184121151548195252445591569548137260401035283523
+2018/07/02 15:26:33 [DEBUG] Successfully incremented state for identity admin to 3
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65280 POST /enroll 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /register
+2018/07/02 15:26:33 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:33 [DEBUG] DB: Get certificate by serial (6d666beb07b5dd72ce504086f324fe88cfa4c39d) and aki (53a6d0de88f1d1366000e01b2041db026b791a6b)
+2018/07/02 15:26:33 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:33 [DEBUG] Received registration request from admin: { Name:peer0.Asus.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:33 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:33 [DEBUG] Validate Affiliation
+2018/07/02 15:26:33 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:33 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:33 [DEBUG] Validate ID
+2018/07/02 15:26:33 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:33 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:33 [DEBUG] Registering user id: peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] DB: Add identity peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] Successfully added identity peer0.Asus.com to the database
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65283 POST /register 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /enroll
+2018/07/02 15:26:33 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] DB: Login user peer0.Asus.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:33 [DEBUG] DB: identity peer0.Asus.com successfully logged in
+2018/07/02 15:26:33 [DEBUG] Processing sign request: id=peer0.Asus.com, CommonName=peer0.Asus.com, Subject=<nil>
+2018/07/02 15:26:33 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] Finished processing sign request
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity peer0.Asus.com
+2018/07/02 15:26:33 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:33 [INFO] signed certificate with serial number 643415114963267497047909653084616952734770933692
+2018/07/02 15:26:33 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:33 [DEBUG] Saved serial number as hex 70b3bb4a2eb745faa5fe0b145fc57441a72a2fbc
+2018/07/02 15:26:33 [DEBUG] saved certificate with serial number 643415114963267497047909653084616952734770933692
+2018/07/02 15:26:33 [DEBUG] Successfully incremented state for identity peer0.Asus.com to 1
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65286 POST /enroll 201 0 "OK"
+2018/07/02 15:26:33 [DEBUG] Received request for /enroll
+2018/07/02 15:26:33 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
+2018/07/02 15:26:33 [DEBUG] DB: identity admin successfully logged in
+2018/07/02 15:26:33 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/02 15:26:33 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:33 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [DEBUG] Finished processing sign request
+2018/07/02 15:26:33 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:33 [INFO] signed certificate with serial number 234379089918687363151960383575521245603952052331
+2018/07/02 15:26:33 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:33 [DEBUG] Saved serial number as hex 290dec00602ed9b85951563c4a803a91db47c86b
+2018/07/02 15:26:33 [DEBUG] saved certificate with serial number 234379089918687363151960383575521245603952052331
+2018/07/02 15:26:33 [DEBUG] Successfully incremented state for identity admin to 4
+2018/07/02 15:26:33 [INFO] 127.0.0.1:65289 POST /enroll 201 0 "OK"
+2018/07/02 15:26:34 [DEBUG] Received request for /register
+2018/07/02 15:26:34 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/02 15:26:34 [DEBUG] DB: Get certificate by serial (6d666beb07b5dd72ce504086f324fe88cfa4c39d) and aki (53a6d0de88f1d1366000e01b2041db026b791a6b)
+2018/07/02 15:26:34 [DEBUG] Successful token authentication of 'admin'
+2018/07/02 15:26:34 [DEBUG] Received registration request from admin: { Name:peer1.Asus.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/02 15:26:34 [DEBUG] DB: Getting identity admin
+2018/07/02 15:26:34 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/02 15:26:34 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/02 15:26:34 [DEBUG] Validate Affiliation
+2018/07/02 15:26:34 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/02 15:26:34 [DEBUG] Caller has root affiliation
+2018/07/02 15:26:34 [DEBUG] Validate ID
+2018/07/02 15:26:34 [DEBUG] Validating affiliation: org1
+2018/07/02 15:26:34 [DEBUG] DB: Get affiliation org1
+2018/07/02 15:26:34 [DEBUG] Registering user id: peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/02 15:26:34 [DEBUG] DB: Getting identity peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] DB: Add identity peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] Successfully added identity peer1.Asus.com to the database
+2018/07/02 15:26:34 [INFO] 127.0.0.1:65293 POST /register 201 0 "OK"
+2018/07/02 15:26:34 [DEBUG] Received request for /enroll
+2018/07/02 15:26:34 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/ca-chain.pem} Signing:0xc42033e3a0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420344cc0 CA:0xc4202c3200 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/__crypto-config/peerOrganizations/Asus.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc42032a5a0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/02 15:26:34 [DEBUG] DB: Getting identity peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] DB: Login user peer1.Asus.com with max enrollments of -1 and state of 0
+2018/07/02 15:26:34 [DEBUG] DB: identity peer1.Asus.com successfully logged in
+2018/07/02 15:26:34 [DEBUG] Processing sign request: id=peer1.Asus.com, CommonName=peer1.Asus.com, Subject=<nil>
+2018/07/02 15:26:34 [DEBUG] Request is not for a CA signing certificate
+2018/07/02 15:26:34 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/02 15:26:34 [DEBUG] DB: Getting identity peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] Finished processing sign request
+2018/07/02 15:26:34 [DEBUG] DB: Getting identity peer1.Asus.com
+2018/07/02 15:26:34 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:34 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e417375732e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/02 15:26:34 [INFO] signed certificate with serial number 634417113468140918042704671103373103048408992482
+2018/07/02 15:26:34 [DEBUG] DB: Insert Certificate
+2018/07/02 15:26:34 [DEBUG] Saved serial number as hex 6f203f4c5df0bbce8092ec8f53cfa5dc17a48ae2
+2018/07/02 15:26:34 [DEBUG] saved certificate with serial number 634417113468140918042704671103373103048408992482
+2018/07/02 15:26:34 [DEBUG] Successfully incremented state for identity peer1.Asus.com to 1
+2018/07/02 15:26:34 [INFO] 127.0.0.1:65296 POST /enroll 201 0 "OK"
+2018/07/02 15:26:34 [DEBUG] Received request for /cainfo
+2018/07/02 15:26:34 [INFO] 127.0.0.1:65299 POST /cainfo 200 0 "OK"
