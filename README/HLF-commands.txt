@@ -1,0 +1,104 @@
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+NETWORK
+
+Now, let's start the network with:
+
+docker-compose -f docker-compose-pcxchg.yaml up -d      // docker-compose-pcxchg.yaml - This file sets up our network
+
+Confirm that each container is indeed running with:
+
+docker ps
+
+You can stop the network with:
+
+docker-compose -f docker-compose-pcxchg.yaml down
+
+To get into an interactive bash with cli.Amazon's container. Then run:
+
+docker exec -it cli.Amazon bash
+
+The orderer will send your peer genesis blocks for those channels with next commands:
+
+peer channel create -c asus -f ./channels/Asus.tx -o orderer.pcxchg.com:7050
+peer channel create -c dell -f ./channels/Dell.tx -o orderer.pcxchg.com:7050
+peer channel create -c hp -f ./channels/HP.tx -o orderer.pcxchg.com:7050
+
+We can use them to join the peer to the channel:
+
+peer channel join -b asus.block
+peer channel join -b dell.block
+peer channel join -b hp.block
+
+Ok, let us use another terminal or leave the container using exit. Join the other peers to the appropriate channels:
+
+docker exec cli.Asus bash -c 'peer channel join -b asus.block'
+docker exec cli.HP bash -c 'peer channel join -b hp.block'
+docker exec cli.Dell bash -c 'peer channel join -b dell.block'
+
+At last, let us use the anchor peer update transactions:
+
+docker exec cli.Asus bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c asus -f ./channels/asusanchor.tx'
+docker exec cli.Dell bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c dell -f ./channels/dellanchor.tx'
+docker exec cli.HP bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c hp -f ./channels/hpanchor.tx'
+docker exec cli.Amazon bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c asus -f ./channels/amazonanchorasus.tx'
+docker exec cli.Amazon bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c dell -f ./channels/amazonanchordell.tx'
+docker exec cli.Amazon bash -c 'peer channel update -o orderer.pcxchg.com:7050 -c hp -f ./channels/amazonanchorhp.tx'
+
+CHAINCODE
+
+First, we install this chaincode on each peer:
+
+docker exec cli.Asus bash -c 'peer chaincode install -p pcxchg -n pcxchg -v 0'
+docker exec cli.HP bash -c 'peer chaincode install -p pcxchg -n pcxchg -v 0'
+docker exec cli.Dell bash -c 'peer chaincode install -p pcxchg -n pcxchg -v 0'
+docker exec cli.Amazon bash -c 'peer chaincode install -p pcxchg -n pcxchg -v 0'
+
+Next, we instantiate the chaincode on each channel:
+
+docker exec cli.Asus bash -c "peer chaincode instantiate -C asus -n pcxchg -v 0 -c '{\"Args\":[]}'"
+docker exec cli.HP bash -c "peer chaincode instantiate -C hp -n pcxchg -v 0 -c '{\"Args\":[]}'"
+docker exec cli.Dell bash -c "peer chaincode instantiate -C dell -n pcxchg -v 0 -c '{\"Args\":[]}'"
+
+TEST METHODS
+
+Now let's create some PCs:
+
+docker exec cli.Asus bash -c "peer chaincode invoke -C asus -n pcxchg -c '{\"Args\":[\"createPC\", \"Asus001\", \"foo\", \"bar\"]}'"
+docker exec cli.Asus bash -c "peer chaincode invoke -C asus -n pcxchg -c '{\"Args\":[\"createPC\", \"Asus002\", \"foo\", \"bar\"]}'"
+docker exec cli.Asus bash -c "peer chaincode invoke -C asus -n pcxchg -c '{\"Args\":[\"createPC\", \"Asus003\", \"foo\", \"bar\"]}'"
+docker exec cli.HP bash -c "peer chaincode invoke -C hp -n pcxchg -c '{\"Args\":[\"createPC\", \"HP001\", \"foo\", \"bar\"]}'"
+docker exec cli.HP bash -c "peer chaincode invoke -C hp -n pcxchg -c '{\"Args\":[\"createPC\", \"HP002\", \"foo\", \"bar\"]}'"
+docker exec cli.Dell bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"createPC\", \"Dell001\", \"foo\", \"bar\"]}'"
+docker exec cli.Dell bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"createPC\", \"Dell002\", \"foo\", \"bar\"]}'"
+docker exec cli.Dell bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"createPC\", \"Dell003\", \"foo\", \"bar\"]}'"
+docker exec cli.Dell bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"createPC\", \"Dell004\", \"foo\", \"bar\"]}'"
+
+Did it work? Let's run some queries:
+
+docker exec cli.Amazon bash -c "peer chaincode query -C asus -n pcxchg -c '{\"Args\":[\"queryStock\"]}'"
+docker exec cli.Amazon bash -c "peer chaincode query -C hp -n pcxchg -c '{\"Args\":[\"queryStock\"]}'"
+docker exec cli.Amazon bash -c "peer chaincode query -C dell -n pcxchg -c '{\"Args\":[\"queryStock\"]}'"
+
+Maybe Amazon should buy a computer now:
+
+docker exec cli.Amazon bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"buyPC\", \"Dell004\"]}'"
+
+Ok, Amazon has one Dell PC, but they need more. Let's look at the details of an Asus model before we buy it:
+
+docker exec cli.Amazon bash -c "peer chaincode query -C asus -n pcxchg -c '{\"Args\":[\"queryDetail\", \"Asus003\"]}'"
+
+Let's buy another one to try it out:
+
+docker exec cli.Amazon bash -c "peer chaincode invoke -C asus -n pcxchg -c '{\"Args\":[\"buyPC\", \"Asus003\"]}'"
+
+After a few weeks... or a few seconds, this computer does not meet the requirements, so let us give it back:
+
+docker exec cli.Amazon bash -c "peer chaincode invoke -C asus -n pcxchg -c '{\"Args\":[\"handBackPC\", \"Asus003\"]}'"
+
+And buy more Dell computers instead:
+
+docker exec cli.Amazon bash -c "peer chaincode invoke -C dell -n pcxchg -c '{\"Args\":[\"buyPC\", \"Dell004\"]}'"
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

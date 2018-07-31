@@ -1,306 +1,306 @@
-2018/06/26 17:06:56 [INFO] Created default configuration file at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server-config.yaml
-2018/06/26 17:06:56 [INFO] Starting server in home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
-2018/06/26 17:06:56 [INFO] Server Version: 1.1.1-snapshot-e656889
-2018/06/26 17:06:56 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
-2018/06/26 17:06:56 [DEBUG] Making server filenames absolute
-2018/06/26 17:06:56 [DEBUG] Initializing default CA in directory /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
-2018/06/26 17:06:56 [DEBUG] Init CA with home /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root and config {Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:<nil> CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:56 [DEBUG] CA Home Directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
-2018/06/26 17:06:56 [DEBUG] Checking configuration file version '1.1.1-snapshot-e656889' against server version: '1.1.1-snapshot-e656889'
-2018/06/26 17:06:56 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4202d9380 PluginOpts:<nil> Pkcs11Opts:<nil>}
-2018/06/26 17:06:56 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4203069f0 DummyKeystore:<nil>}
-2018/06/26 17:06:56 [DEBUG] Initialize key material
-2018/06/26 17:06:56 [DEBUG] Making CA filenames absolute
-2018/06/26 17:06:56 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312600 CA:0xc4202c0800 SerialNumber:}
-2018/06/26 17:06:56 [INFO] generating key: &{A:ecdsa S:256}
-2018/06/26 17:06:56 [DEBUG] generate key from request: algo=ecdsa, size=256
-2018/06/26 17:06:56 [INFO] encoded CSR
-2018/06/26 17:06:56 [DEBUG] validating configuration
-2018/06/26 17:06:56 [DEBUG] validate local profile
-2018/06/26 17:06:56 [DEBUG] profile is valid
-2018/06/26 17:06:56 [INFO] signed certificate with serial number 628582018439903214082307145933232083017247462930
-2018/06/26 17:06:56 [INFO] The CA key and certificate were generated for CA 
-2018/06/26 17:06:56 [INFO] The key was stored by BCCSP provider 'SW'
-2018/06/26 17:06:56 [INFO] The certificate is at: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem
-2018/06/26 17:06:56 [DEBUG] Initializing DB
-2018/06/26 17:06:56 [DEBUG] Initializing 'sqlite3' database at '/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db'
-2018/06/26 17:06:56 [DEBUG] Using sqlite database, connect to database in home (/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db) directory
-2018/06/26 17:06:56 [DEBUG] Creating SQLite database (/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db) if it does not exist...
-2018/06/26 17:06:56 [DEBUG] Creating users table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Creating affiliations table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Creating certificates table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Creating properties table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Successfully opened sqlite3 DB
-2018/06/26 17:06:56 [DEBUG] Checking database schema...
-2018/06/26 17:06:56 [DEBUG] Update SQLite schema, if using outdated schema
-2018/06/26 17:06:56 [DEBUG] Upgrade identities table
-2018/06/26 17:06:56 [DEBUG] Creating users table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Upgrade affiliation table
-2018/06/26 17:06:56 [DEBUG] Creating affiliations table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Upgrade certificates table
-2018/06/26 17:06:56 [DEBUG] Creating certificates table if it does not exist
-2018/06/26 17:06:56 [DEBUG] Initializing identity registry
-2018/06/26 17:06:56 [DEBUG] Initialized DB identity registry
-2018/06/26 17:06:56 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
-2018/06/26 17:06:56 [DEBUG] Checking database levels 'map[affiliation.level:0 certificate.level:0 identity.level:0]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
-2018/06/26 17:06:56 [DEBUG] Loading identity table
-2018/06/26 17:06:56 [DEBUG] Loading identity 'admin'
-2018/06/26 17:06:56 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:56 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/06/26 17:06:56 [DEBUG] DB: Add identity admin
-2018/06/26 17:06:56 [DEBUG] Successfully added identity admin to the database
-2018/06/26 17:06:56 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }
-2018/06/26 17:06:56 [DEBUG] Successfully loaded identity table
-2018/06/26 17:06:56 [DEBUG] Loading affiliations table
-2018/06/26 17:06:56 [DEBUG] DB: Add affiliation org2
-2018/06/26 17:06:56 [DEBUG] Affiliation 'org2' added
-2018/06/26 17:06:56 [DEBUG] DB: Add affiliation org2.department1
-2018/06/26 17:06:56 [DEBUG] Affiliation 'org2.department1' added
-2018/06/26 17:06:56 [DEBUG] DB: Add affiliation org1
-2018/06/26 17:06:56 [DEBUG] Affiliation 'org1' added
-2018/06/26 17:06:56 [DEBUG] DB: Add affiliation org1.department1
-2018/06/26 17:06:56 [DEBUG] Affiliation 'org1.department1' added
-2018/06/26 17:06:56 [DEBUG] DB: Add affiliation org1.department2
-2018/06/26 17:06:56 [DEBUG] Affiliation 'org1.department2' added
-2018/06/26 17:06:56 [DEBUG] Successfully loaded affiliations table
-2018/06/26 17:06:56 [DEBUG] Checking and performing migration, if needed
-2018/06/26 17:06:56 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
-2018/06/26 17:06:56 [INFO] Initialized sqlite3 database at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db
-2018/06/26 17:06:56 [DEBUG] Initializing enrollment signer
-2018/06/26 17:06:56 [DEBUG] validating configuration
-2018/06/26 17:06:56 [DEBUG] validate local profile
-2018/06/26 17:06:56 [DEBUG] profile is valid
-2018/06/26 17:06:56 [DEBUG] validate local profile
-2018/06/26 17:06:56 [DEBUG] profile is valid
-2018/06/26 17:06:56 [DEBUG] validate local profile
-2018/06/26 17:06:56 [DEBUG] profile is valid
-2018/06/26 17:06:56 [DEBUG] CA initialization successful
-2018/06/26 17:06:56 [INFO] Home directory for default CA: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
-2018/06/26 17:06:56 [DEBUG] 1 CA instance(s) running on server
-2018/06/26 17:06:56 [INFO] Listening on http://0.0.0.0:7104
-2018/06/26 17:06:57 [DEBUG] Received request for /enroll
-2018/06/26 17:06:57 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
-2018/06/26 17:06:57 [DEBUG] DB: identity admin successfully logged in
-2018/06/26 17:06:57 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
-2018/06/26 17:06:57 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:57 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [DEBUG] Finished processing sign request
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [INFO] signed certificate with serial number 521127153931267827376580344232919337432225488012
-2018/06/26 17:06:57 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:57 [DEBUG] Saved serial number as hex 5b482657c40883b3db89d15271b849e932251c8c
-2018/06/26 17:06:57 [DEBUG] saved certificate with serial number 521127153931267827376580344232919337432225488012
-2018/06/26 17:06:57 [DEBUG] Successfully incremented state for identity admin to 1
-2018/06/26 17:06:57 [INFO] [::1]:49506 POST /enroll 201 0 "OK"
-2018/06/26 17:06:57 [DEBUG] Received request for /enroll
-2018/06/26 17:06:57 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
-2018/06/26 17:06:57 [DEBUG] DB: identity admin successfully logged in
-2018/06/26 17:06:57 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
-2018/06/26 17:06:57 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:57 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [DEBUG] Finished processing sign request
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [INFO] signed certificate with serial number 599314164810633801232447533196423181473969454017
-2018/06/26 17:06:57 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:57 [DEBUG] Saved serial number as hex 68fa2d35c1b6aa7a32f356bd414b6a3e4229bbc1
-2018/06/26 17:06:57 [DEBUG] saved certificate with serial number 599314164810633801232447533196423181473969454017
-2018/06/26 17:06:57 [DEBUG] Successfully incremented state for identity admin to 2
-2018/06/26 17:06:57 [INFO] [::1]:49509 POST /enroll 201 0 "OK"
-2018/06/26 17:06:57 [DEBUG] Received request for /register
-2018/06/26 17:06:57 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/06/26 17:06:57 [DEBUG] DB: Get certificate by serial (68fa2d35c1b6aa7a32f356bd414b6a3e4229bbc1) and aki (95ccf06db453e355d8192d34b68edb3ae45e919f)
-2018/06/26 17:06:57 [DEBUG] Successful token authentication of 'admin'
-2018/06/26 17:06:57 [DEBUG] Received registration request from admin: { Name:nodeAdmin Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:57 [DEBUG] canRegister - Check to see if user 'admin' can register
-2018/06/26 17:06:57 [DEBUG] Checking to see if caller 'admin' is a registrar
-2018/06/26 17:06:57 [DEBUG] Validate Affiliation
-2018/06/26 17:06:57 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
-2018/06/26 17:06:57 [DEBUG] Caller has root affiliation
-2018/06/26 17:06:57 [DEBUG] Validate ID
-2018/06/26 17:06:57 [DEBUG] Validating affiliation: org1
-2018/06/26 17:06:57 [DEBUG] DB: Get affiliation org1
-2018/06/26 17:06:57 [DEBUG] Registering user id: nodeAdmin
-2018/06/26 17:06:57 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/06/26 17:06:57 [DEBUG] DB: Getting identity nodeAdmin
-2018/06/26 17:06:57 [DEBUG] DB: Add identity nodeAdmin
-2018/06/26 17:06:57 [DEBUG] Successfully added identity nodeAdmin to the database
-2018/06/26 17:06:57 [INFO] [::1]:49512 POST /register 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /enroll
-2018/06/26 17:06:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity nodeAdmin
-2018/06/26 17:06:58 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
-2018/06/26 17:06:58 [DEBUG] DB: identity nodeAdmin successfully logged in
-2018/06/26 17:06:58 [DEBUG] Processing sign request: id=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
-2018/06/26 17:06:58 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity nodeAdmin
-2018/06/26 17:06:58 [DEBUG] Finished processing sign request
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity nodeAdmin
-2018/06/26 17:06:58 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [INFO] signed certificate with serial number 531226148542123691840961739121377538669468615615
-2018/06/26 17:06:58 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:58 [DEBUG] Saved serial number as hex 5d0d011d8d05c7056bca60ad937b316291ca83bf
-2018/06/26 17:06:58 [DEBUG] saved certificate with serial number 531226148542123691840961739121377538669468615615
-2018/06/26 17:06:58 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
-2018/06/26 17:06:58 [INFO] [::1]:49515 POST /enroll 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /register
-2018/06/26 17:06:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/06/26 17:06:58 [DEBUG] DB: Get certificate by serial (68fa2d35c1b6aa7a32f356bd414b6a3e4229bbc1) and aki (95ccf06db453e355d8192d34b68edb3ae45e919f)
-2018/06/26 17:06:58 [DEBUG] Successful token authentication of 'admin'
-2018/06/26 17:06:58 [DEBUG] Received registration request from admin: { Name:User1@Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] canRegister - Check to see if user 'admin' can register
-2018/06/26 17:06:58 [DEBUG] Checking to see if caller 'admin' is a registrar
-2018/06/26 17:06:58 [DEBUG] Validate Affiliation
-2018/06/26 17:06:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
-2018/06/26 17:06:58 [DEBUG] Caller has root affiliation
-2018/06/26 17:06:58 [DEBUG] Validate ID
-2018/06/26 17:06:58 [DEBUG] Validating affiliation: org1
-2018/06/26 17:06:58 [DEBUG] DB: Get affiliation org1
-2018/06/26 17:06:58 [DEBUG] Registering user id: User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] DB: Add identity User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] Successfully added identity User1@Amazon.com to the database
-2018/06/26 17:06:58 [INFO] [::1]:49518 POST /register 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /enroll
-2018/06/26 17:06:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] DB: Login user User1@Amazon.com with max enrollments of -1 and state of 0
-2018/06/26 17:06:58 [DEBUG] DB: identity User1@Amazon.com successfully logged in
-2018/06/26 17:06:58 [DEBUG] Processing sign request: id=User1@Amazon.com, CommonName=User1@Amazon.com, Subject=<nil>
-2018/06/26 17:06:58 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] Finished processing sign request
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity User1@Amazon.com
-2018/06/26 17:06:58 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [INFO] signed certificate with serial number 438793348965806635831123581750812601835018313347
-2018/06/26 17:06:58 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:58 [DEBUG] Saved serial number as hex 4cdc2c9d38207eb0de909ee3825248312330de83
-2018/06/26 17:06:58 [DEBUG] saved certificate with serial number 438793348965806635831123581750812601835018313347
-2018/06/26 17:06:58 [DEBUG] Successfully incremented state for identity User1@Amazon.com to 1
-2018/06/26 17:06:58 [INFO] [::1]:49521 POST /enroll 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /enroll
-2018/06/26 17:06:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
-2018/06/26 17:06:58 [DEBUG] DB: identity admin successfully logged in
-2018/06/26 17:06:58 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
-2018/06/26 17:06:58 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] Finished processing sign request
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [INFO] signed certificate with serial number 174353723543037387086643194909445814498739591197
-2018/06/26 17:06:58 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:58 [DEBUG] Saved serial number as hex 1e8a4a96ac96f2ed8b4cc52f88b1b71ad76b981d
-2018/06/26 17:06:58 [DEBUG] saved certificate with serial number 174353723543037387086643194909445814498739591197
-2018/06/26 17:06:58 [DEBUG] Successfully incremented state for identity admin to 3
-2018/06/26 17:06:58 [INFO] [::1]:49524 POST /enroll 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /register
-2018/06/26 17:06:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/06/26 17:06:58 [DEBUG] DB: Get certificate by serial (68fa2d35c1b6aa7a32f356bd414b6a3e4229bbc1) and aki (95ccf06db453e355d8192d34b68edb3ae45e919f)
-2018/06/26 17:06:58 [DEBUG] Successful token authentication of 'admin'
-2018/06/26 17:06:58 [DEBUG] Received registration request from admin: { Name:peer0.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] canRegister - Check to see if user 'admin' can register
-2018/06/26 17:06:58 [DEBUG] Checking to see if caller 'admin' is a registrar
-2018/06/26 17:06:58 [DEBUG] Validate Affiliation
-2018/06/26 17:06:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
-2018/06/26 17:06:58 [DEBUG] Caller has root affiliation
-2018/06/26 17:06:58 [DEBUG] Validate ID
-2018/06/26 17:06:58 [DEBUG] Validating affiliation: org1
-2018/06/26 17:06:58 [DEBUG] DB: Get affiliation org1
-2018/06/26 17:06:58 [DEBUG] Registering user id: peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] DB: Add identity peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Successfully added identity peer0.Amazon.com to the database
-2018/06/26 17:06:58 [INFO] [::1]:49527 POST /register 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /enroll
-2018/06/26 17:06:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] DB: Login user peer0.Amazon.com with max enrollments of -1 and state of 0
-2018/06/26 17:06:58 [DEBUG] DB: identity peer0.Amazon.com successfully logged in
-2018/06/26 17:06:58 [DEBUG] Processing sign request: id=peer0.Amazon.com, CommonName=peer0.Amazon.com, Subject=<nil>
-2018/06/26 17:06:58 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Finished processing sign request
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity peer0.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:58 [INFO] signed certificate with serial number 561485642273119773368403351586525703523041979447
-2018/06/26 17:06:58 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:58 [DEBUG] Saved serial number as hex 6259e311665218d1ab6027ed70e0eec63f5eac37
-2018/06/26 17:06:58 [DEBUG] saved certificate with serial number 561485642273119773368403351586525703523041979447
-2018/06/26 17:06:58 [DEBUG] Successfully incremented state for identity peer0.Amazon.com to 1
-2018/06/26 17:06:58 [INFO] [::1]:49530 POST /enroll 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /enroll
-2018/06/26 17:06:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
-2018/06/26 17:06:58 [DEBUG] DB: identity admin successfully logged in
-2018/06/26 17:06:58 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
-2018/06/26 17:06:58 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] Finished processing sign request
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [INFO] signed certificate with serial number 418793973397546602208488313993328157321630965299
-2018/06/26 17:06:58 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:58 [DEBUG] Saved serial number as hex 495b5f0ab7d4a558dd35b2d090ae6e17cec5de33
-2018/06/26 17:06:58 [DEBUG] saved certificate with serial number 418793973397546602208488313993328157321630965299
-2018/06/26 17:06:58 [DEBUG] Successfully incremented state for identity admin to 4
-2018/06/26 17:06:58 [INFO] [::1]:49533 POST /enroll 201 0 "OK"
-2018/06/26 17:06:58 [DEBUG] Received request for /register
-2018/06/26 17:06:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
-2018/06/26 17:06:58 [DEBUG] DB: Get certificate by serial (68fa2d35c1b6aa7a32f356bd414b6a3e4229bbc1) and aki (95ccf06db453e355d8192d34b68edb3ae45e919f)
-2018/06/26 17:06:58 [DEBUG] Successful token authentication of 'admin'
-2018/06/26 17:06:58 [DEBUG] Received registration request from admin: { Name:peer1.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity admin
-2018/06/26 17:06:58 [DEBUG] canRegister - Check to see if user 'admin' can register
-2018/06/26 17:06:58 [DEBUG] Checking to see if caller 'admin' is a registrar
-2018/06/26 17:06:58 [DEBUG] Validate Affiliation
-2018/06/26 17:06:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
-2018/06/26 17:06:58 [DEBUG] Caller has root affiliation
-2018/06/26 17:06:58 [DEBUG] Validate ID
-2018/06/26 17:06:58 [DEBUG] Validating affiliation: org1
-2018/06/26 17:06:58 [DEBUG] DB: Get affiliation org1
-2018/06/26 17:06:58 [DEBUG] Registering user id: peer1.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
-2018/06/26 17:06:58 [DEBUG] DB: Getting identity peer1.Amazon.com
-2018/06/26 17:06:58 [DEBUG] DB: Add identity peer1.Amazon.com
-2018/06/26 17:06:58 [DEBUG] Successfully added identity peer1.Amazon.com to the database
-2018/06/26 17:06:58 [INFO] [::1]:49536 POST /register 201 0 "OK"
-2018/06/26 17:06:59 [DEBUG] Received request for /enroll
-2018/06/26 17:06:59 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4203072e0 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc4203125e0 CA:0xc4202c0800 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d9320 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
-2018/06/26 17:06:59 [DEBUG] DB: Getting identity peer1.Amazon.com
-2018/06/26 17:06:59 [DEBUG] DB: Login user peer1.Amazon.com with max enrollments of -1 and state of 0
-2018/06/26 17:06:59 [DEBUG] DB: identity peer1.Amazon.com successfully logged in
-2018/06/26 17:06:59 [DEBUG] Processing sign request: id=peer1.Amazon.com, CommonName=peer1.Amazon.com, Subject=<nil>
-2018/06/26 17:06:59 [DEBUG] Request is not for a CA signing certificate
-2018/06/26 17:06:59 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
-2018/06/26 17:06:59 [DEBUG] DB: Getting identity peer1.Amazon.com
-2018/06/26 17:06:59 [DEBUG] Finished processing sign request
-2018/06/26 17:06:59 [DEBUG] DB: Getting identity peer1.Amazon.com
-2018/06/26 17:06:59 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:59 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
-2018/06/26 17:06:59 [INFO] signed certificate with serial number 485443437243024708431212498179209950675107159670
-2018/06/26 17:06:59 [DEBUG] DB: Insert Certificate
-2018/06/26 17:06:59 [DEBUG] Saved serial number as hex 5508095d4eacb82ebb7278db4995205cdc499e76
-2018/06/26 17:06:59 [DEBUG] saved certificate with serial number 485443437243024708431212498179209950675107159670
-2018/06/26 17:06:59 [DEBUG] Successfully incremented state for identity peer1.Amazon.com to 1
-2018/06/26 17:06:59 [INFO] [::1]:49539 POST /enroll 201 0 "OK"
-2018/06/26 17:06:59 [DEBUG] Received request for /cainfo
-2018/06/26 17:06:59 [INFO] [::1]:49542 POST /cainfo 200 0 "OK"
+2018/07/31 15:34:56 [INFO] Created default configuration file at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server-config.yaml
+2018/07/31 15:34:56 [INFO] Starting server in home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
+2018/07/31 15:34:56 [INFO] Server Version: 1.1.1-snapshot-e656889
+2018/07/31 15:34:56 [INFO] Server Levels: &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/31 15:34:56 [DEBUG] Making server filenames absolute
+2018/07/31 15:34:56 [DEBUG] Initializing default CA in directory /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
+2018/07/31 15:34:56 [DEBUG] Init CA with home /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root and config {Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile: Certfile:ca-cert.pem Chainfile:ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:<nil> CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:56 [DEBUG] CA Home Directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
+2018/07/31 15:34:56 [DEBUG] Checking configuration file version '1.1.1-snapshot-e656889' against server version: '1.1.1-snapshot-e656889'
+2018/07/31 15:34:56 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4202d9140 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/31 15:34:56 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4202fb2a0 DummyKeystore:<nil>}
+2018/07/31 15:34:56 [DEBUG] Initialize key material
+2018/07/31 15:34:56 [DEBUG] Making CA filenames absolute
+2018/07/31 15:34:56 [DEBUG] Root CA certificate request: {CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312640 CA:0xc4203120c0 SerialNumber:}
+2018/07/31 15:34:56 [INFO] generating key: &{A:ecdsa S:256}
+2018/07/31 15:34:56 [DEBUG] generate key from request: algo=ecdsa, size=256
+2018/07/31 15:34:56 [INFO] encoded CSR
+2018/07/31 15:34:56 [DEBUG] validating configuration
+2018/07/31 15:34:56 [DEBUG] validate local profile
+2018/07/31 15:34:56 [DEBUG] profile is valid
+2018/07/31 15:34:56 [INFO] signed certificate with serial number 42649339188880083440867372689908890208646902234
+2018/07/31 15:34:56 [INFO] The CA key and certificate were generated for CA 
+2018/07/31 15:34:56 [INFO] The key was stored by BCCSP provider 'SW'
+2018/07/31 15:34:56 [INFO] The certificate is at: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem
+2018/07/31 15:34:56 [DEBUG] Initializing DB
+2018/07/31 15:34:56 [DEBUG] Initializing 'sqlite3' database at '/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db'
+2018/07/31 15:34:56 [DEBUG] Using sqlite database, connect to database in home (/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db) directory
+2018/07/31 15:34:56 [DEBUG] Creating SQLite database (/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db) if it does not exist...
+2018/07/31 15:34:56 [DEBUG] Creating users table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Creating affiliations table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Creating certificates table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Creating properties table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Successfully opened sqlite3 DB
+2018/07/31 15:34:56 [DEBUG] Checking database schema...
+2018/07/31 15:34:56 [DEBUG] Update SQLite schema, if using outdated schema
+2018/07/31 15:34:56 [DEBUG] Upgrade identities table
+2018/07/31 15:34:56 [DEBUG] Creating users table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Upgrade affiliation table
+2018/07/31 15:34:56 [DEBUG] Creating affiliations table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Upgrade certificates table
+2018/07/31 15:34:56 [DEBUG] Creating certificates table if it does not exist
+2018/07/31 15:34:56 [DEBUG] Initializing identity registry
+2018/07/31 15:34:56 [DEBUG] Initialized DB identity registry
+2018/07/31 15:34:56 [DEBUG] DB: Get properties [identity.level affiliation.level certificate.level]
+2018/07/31 15:34:56 [DEBUG] Checking database levels 'map[affiliation.level:0 certificate.level:0 identity.level:0]' against server levels '&{Identity:1 Affiliation:1 Certificate:1}'
+2018/07/31 15:34:56 [DEBUG] Loading identity table
+2018/07/31 15:34:56 [DEBUG] Loading identity 'admin'
+2018/07/31 15:34:56 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:56 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/31 15:34:56 [DEBUG] DB: Add identity admin
+2018/07/31 15:34:57 [DEBUG] Successfully added identity admin to the database
+2018/07/31 15:34:57 [DEBUG] Registered identity: { Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }
+2018/07/31 15:34:57 [DEBUG] Successfully loaded identity table
+2018/07/31 15:34:57 [DEBUG] Loading affiliations table
+2018/07/31 15:34:57 [DEBUG] DB: Add affiliation org1
+2018/07/31 15:34:57 [DEBUG] Affiliation 'org1' added
+2018/07/31 15:34:57 [DEBUG] DB: Add affiliation org1.department1
+2018/07/31 15:34:57 [DEBUG] Affiliation 'org1.department1' added
+2018/07/31 15:34:57 [DEBUG] DB: Add affiliation org1.department2
+2018/07/31 15:34:57 [DEBUG] Affiliation 'org1.department2' added
+2018/07/31 15:34:57 [DEBUG] DB: Add affiliation org2
+2018/07/31 15:34:57 [DEBUG] Affiliation 'org2' added
+2018/07/31 15:34:57 [DEBUG] DB: Add affiliation org2.department1
+2018/07/31 15:34:57 [DEBUG] Affiliation 'org2.department1' added
+2018/07/31 15:34:57 [DEBUG] Successfully loaded affiliations table
+2018/07/31 15:34:57 [DEBUG] Checking and performing migration, if needed
+2018/07/31 15:34:57 [DEBUG] Updating database level to &{Identity:1 Affiliation:1 Certificate:1}
+2018/07/31 15:34:57 [INFO] Initialized sqlite3 database at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db
+2018/07/31 15:34:57 [DEBUG] Initializing enrollment signer
+2018/07/31 15:34:57 [DEBUG] validating configuration
+2018/07/31 15:34:57 [DEBUG] validate local profile
+2018/07/31 15:34:57 [DEBUG] profile is valid
+2018/07/31 15:34:57 [DEBUG] validate local profile
+2018/07/31 15:34:57 [DEBUG] profile is valid
+2018/07/31 15:34:57 [DEBUG] validate local profile
+2018/07/31 15:34:57 [DEBUG] profile is valid
+2018/07/31 15:34:57 [DEBUG] CA initialization successful
+2018/07/31 15:34:57 [INFO] Home directory for default CA: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root
+2018/07/31 15:34:57 [DEBUG] 1 CA instance(s) running on server
+2018/07/31 15:34:57 [INFO] Listening on http://0.0.0.0:7104
+2018/07/31 15:34:57 [DEBUG] Received request for /enroll
+2018/07/31 15:34:57 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:57 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:57 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 0
+2018/07/31 15:34:58 [DEBUG] DB: identity admin successfully logged in
+2018/07/31 15:34:58 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/31 15:34:58 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] Finished processing sign request
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [INFO] signed certificate with serial number 180843108244243622659592538964519121911801235698
+2018/07/31 15:34:58 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:58 [DEBUG] Saved serial number as hex 1fad491250cd1970fa135ae19c815a2c14d8c8f2
+2018/07/31 15:34:58 [DEBUG] saved certificate with serial number 180843108244243622659592538964519121911801235698
+2018/07/31 15:34:58 [DEBUG] Successfully incremented state for identity admin to 1
+2018/07/31 15:34:58 [INFO] [::1]:50054 POST /enroll 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /enroll
+2018/07/31 15:34:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 1
+2018/07/31 15:34:58 [DEBUG] DB: identity admin successfully logged in
+2018/07/31 15:34:58 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/31 15:34:58 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] Finished processing sign request
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [INFO] signed certificate with serial number 185693140715792585036686529688285987834618806857
+2018/07/31 15:34:58 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:58 [DEBUG] Saved serial number as hex 2086c4b6bea1c1eb4dd47dc793000560cfe98249
+2018/07/31 15:34:58 [DEBUG] saved certificate with serial number 185693140715792585036686529688285987834618806857
+2018/07/31 15:34:58 [DEBUG] Successfully incremented state for identity admin to 2
+2018/07/31 15:34:58 [INFO] [::1]:50057 POST /enroll 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /register
+2018/07/31 15:34:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/31 15:34:58 [DEBUG] DB: Get certificate by serial (2086c4b6bea1c1eb4dd47dc793000560cfe98249) and aki (c79d9f69cb9664d3d4c9f6eb59574961c1615a26)
+2018/07/31 15:34:58 [DEBUG] Successful token authentication of 'admin'
+2018/07/31 15:34:58 [DEBUG] Received registration request from admin: { Name:nodeAdmin Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/31 15:34:58 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/31 15:34:58 [DEBUG] Validate Affiliation
+2018/07/31 15:34:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/31 15:34:58 [DEBUG] Caller has root affiliation
+2018/07/31 15:34:58 [DEBUG] Validate ID
+2018/07/31 15:34:58 [DEBUG] Validating affiliation: org1
+2018/07/31 15:34:58 [DEBUG] DB: Get affiliation org1
+2018/07/31 15:34:58 [DEBUG] Registering user id: nodeAdmin
+2018/07/31 15:34:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/31 15:34:58 [DEBUG] DB: Add identity nodeAdmin
+2018/07/31 15:34:58 [DEBUG] Successfully added identity nodeAdmin to the database
+2018/07/31 15:34:58 [INFO] [::1]:50060 POST /register 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /enroll
+2018/07/31 15:34:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:*]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/31 15:34:58 [DEBUG] DB: Login user nodeAdmin with max enrollments of -1 and state of 0
+2018/07/31 15:34:58 [DEBUG] DB: identity nodeAdmin successfully logged in
+2018/07/31 15:34:58 [DEBUG] Processing sign request: id=nodeAdmin, CommonName=nodeAdmin, Subject=<nil>
+2018/07/31 15:34:58 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/31 15:34:58 [DEBUG] Finished processing sign request
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity nodeAdmin
+2018/07/31 15:34:58 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:58 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a226e6f646541646d696e222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:58 [INFO] signed certificate with serial number 378709012492122063287842204763111145512907500107
+2018/07/31 15:34:58 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:58 [DEBUG] Saved serial number as hex 4255e641f995c3ecad39949088860f67ffc6ea4b
+2018/07/31 15:34:58 [DEBUG] saved certificate with serial number 378709012492122063287842204763111145512907500107
+2018/07/31 15:34:58 [DEBUG] Successfully incremented state for identity nodeAdmin to 1
+2018/07/31 15:34:58 [INFO] [::1]:50063 POST /enroll 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /register
+2018/07/31 15:34:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/31 15:34:58 [DEBUG] DB: Get certificate by serial (2086c4b6bea1c1eb4dd47dc793000560cfe98249) and aki (c79d9f69cb9664d3d4c9f6eb59574961c1615a26)
+2018/07/31 15:34:58 [DEBUG] Successful token authentication of 'admin'
+2018/07/31 15:34:58 [DEBUG] Received registration request from admin: { Name:User1@Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/31 15:34:58 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/31 15:34:58 [DEBUG] Validate Affiliation
+2018/07/31 15:34:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/31 15:34:58 [DEBUG] Caller has root affiliation
+2018/07/31 15:34:58 [DEBUG] Validate ID
+2018/07/31 15:34:58 [DEBUG] Validating affiliation: org1
+2018/07/31 15:34:58 [DEBUG] DB: Get affiliation org1
+2018/07/31 15:34:58 [DEBUG] Registering user id: User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] DB: Add identity User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] Successfully added identity User1@Amazon.com to the database
+2018/07/31 15:34:58 [INFO] [::1]:50070 POST /register 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /enroll
+2018/07/31 15:34:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] DB: Login user User1@Amazon.com with max enrollments of -1 and state of 0
+2018/07/31 15:34:58 [DEBUG] DB: identity User1@Amazon.com successfully logged in
+2018/07/31 15:34:58 [DEBUG] Processing sign request: id=User1@Amazon.com, CommonName=User1@Amazon.com, Subject=<nil>
+2018/07/31 15:34:58 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] Finished processing sign request
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity User1@Amazon.com
+2018/07/31 15:34:58 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:58 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a22557365723140416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:58 [INFO] signed certificate with serial number 409100142725653204798020870114608602465417282411
+2018/07/31 15:34:58 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:58 [DEBUG] Saved serial number as hex 47a8af52bc8ac0afdb95ac08bf30ce13a2e7c36b
+2018/07/31 15:34:58 [DEBUG] saved certificate with serial number 409100142725653204798020870114608602465417282411
+2018/07/31 15:34:58 [DEBUG] Successfully incremented state for identity User1@Amazon.com to 1
+2018/07/31 15:34:58 [INFO] [::1]:50073 POST /enroll 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /enroll
+2018/07/31 15:34:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1]  }]} Affiliations:map[org2:[department1] org1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 2
+2018/07/31 15:34:58 [DEBUG] DB: identity admin successfully logged in
+2018/07/31 15:34:58 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/31 15:34:58 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:58 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] Finished processing sign request
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [INFO] signed certificate with serial number 325204512157132721649799323913109467433868431993
+2018/07/31 15:34:58 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:58 [DEBUG] Saved serial number as hex 38f6acb741ae7a95d9c0864b7716d234dcb79279
+2018/07/31 15:34:58 [DEBUG] saved certificate with serial number 325204512157132721649799323913109467433868431993
+2018/07/31 15:34:58 [DEBUG] Successfully incremented state for identity admin to 3
+2018/07/31 15:34:58 [INFO] [::1]:50076 POST /enroll 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /register
+2018/07/31 15:34:58 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/31 15:34:58 [DEBUG] DB: Get certificate by serial (2086c4b6bea1c1eb4dd47dc793000560cfe98249) and aki (c79d9f69cb9664d3d4c9f6eb59574961c1615a26)
+2018/07/31 15:34:58 [DEBUG] Successful token authentication of 'admin'
+2018/07/31 15:34:58 [DEBUG] Received registration request from admin: { Name:peer0.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:58 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/31 15:34:58 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/31 15:34:58 [DEBUG] Validate Affiliation
+2018/07/31 15:34:58 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/31 15:34:58 [DEBUG] Caller has root affiliation
+2018/07/31 15:34:58 [DEBUG] Validate ID
+2018/07/31 15:34:58 [DEBUG] Validating affiliation: org1
+2018/07/31 15:34:58 [DEBUG] DB: Get affiliation org1
+2018/07/31 15:34:58 [DEBUG] Registering user id: peer0.Amazon.com
+2018/07/31 15:34:58 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity peer0.Amazon.com
+2018/07/31 15:34:58 [DEBUG] DB: Add identity peer0.Amazon.com
+2018/07/31 15:34:58 [DEBUG] Successfully added identity peer0.Amazon.com to the database
+2018/07/31 15:34:58 [INFO] [::1]:50079 POST /register 201 0 "OK"
+2018/07/31 15:34:58 [DEBUG] Received request for /enroll
+2018/07/31 15:34:58 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:58 [DEBUG] DB: Getting identity peer0.Amazon.com
+2018/07/31 15:34:58 [DEBUG] DB: Login user peer0.Amazon.com with max enrollments of -1 and state of 0
+2018/07/31 15:34:59 [DEBUG] DB: identity peer0.Amazon.com successfully logged in
+2018/07/31 15:34:59 [DEBUG] Processing sign request: id=peer0.Amazon.com, CommonName=peer0.Amazon.com, Subject=<nil>
+2018/07/31 15:34:59 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:59 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer0.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Finished processing sign request
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer0.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:59 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572302e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:59 [INFO] signed certificate with serial number 36595076177885524522825739994010405996039621359
+2018/07/31 15:34:59 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:59 [DEBUG] Saved serial number as hex 668fadf499c2c3b77ba1ce7bde3af0e44a1caef
+2018/07/31 15:34:59 [DEBUG] saved certificate with serial number 36595076177885524522825739994010405996039621359
+2018/07/31 15:34:59 [DEBUG] Successfully incremented state for identity peer0.Amazon.com to 1
+2018/07/31 15:34:59 [INFO] [::1]:50082 POST /enroll 201 0 "OK"
+2018/07/31 15:34:59 [DEBUG] Received request for /enroll
+2018/07/31 15:34:59 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.Roles:peer,orderer,client,user hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:59 [DEBUG] DB: Login user admin with max enrollments of -1 and state of 3
+2018/07/31 15:34:59 [DEBUG] DB: identity admin successfully logged in
+2018/07/31 15:34:59 [DEBUG] Processing sign request: id=admin, CommonName=admin, Subject=<nil>
+2018/07/31 15:34:59 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:59 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:59 [DEBUG] Finished processing sign request
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:59 [INFO] signed certificate with serial number 248061026242375201114173757321566835358817004460
+2018/07/31 15:34:59 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:59 [DEBUG] Saved serial number as hex 2b7370ed8489d51c33999524e8e3f98900ef2bac
+2018/07/31 15:34:59 [DEBUG] saved certificate with serial number 248061026242375201114173757321566835358817004460
+2018/07/31 15:34:59 [DEBUG] Successfully incremented state for identity admin to 4
+2018/07/31 15:34:59 [INFO] [::1]:50085 POST /enroll 201 0 "OK"
+2018/07/31 15:34:59 [DEBUG] Received request for /register
+2018/07/31 15:34:59 [DEBUG] Checking for revocation/expiration of certificate owned by 'admin'
+2018/07/31 15:34:59 [DEBUG] DB: Get certificate by serial (2086c4b6bea1c1eb4dd47dc793000560cfe98249) and aki (c79d9f69cb9664d3d4c9f6eb59574961c1615a26)
+2018/07/31 15:34:59 [DEBUG] Successful token authentication of 'admin'
+2018/07/31 15:34:59 [DEBUG] Received registration request from admin: { Name:peer1.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity admin
+2018/07/31 15:34:59 [DEBUG] canRegister - Check to see if user 'admin' can register
+2018/07/31 15:34:59 [DEBUG] Checking to see if caller 'admin' is a registrar
+2018/07/31 15:34:59 [DEBUG] Validate Affiliation
+2018/07/31 15:34:59 [DEBUG] Checking to see if affiliation 'org1' contains caller's affiliation ''
+2018/07/31 15:34:59 [DEBUG] Caller has root affiliation
+2018/07/31 15:34:59 [DEBUG] Validate ID
+2018/07/31 15:34:59 [DEBUG] Validating affiliation: org1
+2018/07/31 15:34:59 [DEBUG] DB: Get affiliation org1
+2018/07/31 15:34:59 [DEBUG] Registering user id: peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Max enrollment value verification - User specified max enrollment: 0, CA max enrollment: -1
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] DB: Add identity peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Successfully added identity peer1.Amazon.com to the database
+2018/07/31 15:34:59 [INFO] [::1]:50088 POST /register 201 0 "OK"
+2018/07/31 15:34:59 [DEBUG] Received request for /enroll
+2018/07/31 15:34:59 [DEBUG] ca.Config: &{Version:1.1.1-snapshot-e656889 Cfg:{Identities:{AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name: Keyfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-key.pem Certfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-cert.pem Chainfile:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/ca-chain.pem} Signing:0xc4202fbb10 CSR:{CN:fabric-ca-server Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local localhost] KeyRequest:0xc420312620 CA:0xc4203120c0 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:0 Attrs:map[hf.Registrar.DelegateRoles:peer,orderer,client,user hf.Revoker:1 hf.IntermediateCA:1 hf.GenCRL:1 hf.Registrar.Attributes:* hf.AffiliationMgr:1 hf.Registrar.Roles:peer,orderer,client,user]  }]} Affiliations:map[org1:[department1 department2] org2:[department1]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[uid member] [{ }] map[groups:[{ }]]} TLS:{false [] { }}  } DB:{ Type:sqlite3 Datasource:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/ca/root/fabric-ca-server.db TLS:{false [] { }}  } CSP:0xc4202d90e0 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  }} CRL:{Expiry:24h0m0s}}
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] DB: Login user peer1.Amazon.com with max enrollments of -1 and state of 0
+2018/07/31 15:34:59 [DEBUG] DB: identity peer1.Amazon.com successfully logged in
+2018/07/31 15:34:59 [DEBUG] Processing sign request: id=peer1.Amazon.com, CommonName=peer1.Amazon.com, Subject=<nil>
+2018/07/31 15:34:59 [DEBUG] Request is not for a CA signing certificate
+2018/07/31 15:34:59 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Finished processing sign request
+2018/07/31 15:34:59 [DEBUG] DB: Getting identity peer1.Amazon.com
+2018/07/31 15:34:59 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:59 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a226f726731222c2268662e456e726f6c6c6d656e744944223a2270656572312e416d617a6f6e2e636f6d222c2268662e54797065223a2275736572227d7d}
+2018/07/31 15:34:59 [INFO] signed certificate with serial number 302861698600673337715070186701106385054107456515
+2018/07/31 15:34:59 [DEBUG] DB: Insert Certificate
+2018/07/31 15:34:59 [DEBUG] Saved serial number as hex 350cc9cb76bddbd98da22fa48aad7497fa905403
+2018/07/31 15:34:59 [DEBUG] saved certificate with serial number 302861698600673337715070186701106385054107456515
+2018/07/31 15:34:59 [DEBUG] Successfully incremented state for identity peer1.Amazon.com to 1
+2018/07/31 15:34:59 [INFO] [::1]:50091 POST /enroll 201 0 "OK"
+2018/07/31 15:34:59 [DEBUG] Received request for /cainfo
+2018/07/31 15:34:59 [INFO] [::1]:50094 POST /cainfo 200 0 "OK"

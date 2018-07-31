@@ -1,22 +1,22 @@
-2018/06/26 17:06:58 [DEBUG] Home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin
-2018/06/26 17:06:58 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/fabric-ca-client-config.yaml
-2018/06/26 17:06:58 [DEBUG] Checking for enrollment
-2018/06/26 17:06:58 [DEBUG] Initializing client with config: &{URL:http://localhost:7104 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca20}
-2018/06/26 17:06:58 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201aca80 PluginOpts:<nil> Pkcs11Opts:<nil>}
-2018/06/26 17:06:58 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201b94e0 DummyKeystore:<nil>}
-2018/06/26 17:06:58 [DEBUG] Client configuration settings: &{URL:http://localhost:7104 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca20}
-2018/06/26 17:06:58 [DEBUG] Entered runRegister
-2018/06/26 17:06:58 [DEBUG] Initializing client with config: &{URL:http://localhost:7104 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca20}
-2018/06/26 17:06:58 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201aca80 PluginOpts:<nil> Pkcs11Opts:<nil>}
-2018/06/26 17:06:58 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201b94e0 DummyKeystore:<nil>}
-2018/06/26 17:06:58 [DEBUG] Loading identity: keyFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp/keystore/key.pem, certFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp/signcerts/cert.pem
-2018/06/26 17:06:58 [DEBUG] Register { Name:peer1.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:06:58 [DEBUG] Adding token-based authorization header
-2018/06/26 17:06:58 [DEBUG] Sending request
+2018/07/31 15:34:59 [DEBUG] Home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin
+2018/07/31 15:34:59 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/fabric-ca-client-config.yaml
+2018/07/31 15:34:59 [DEBUG] Checking for enrollment
+2018/07/31 15:34:59 [DEBUG] Initializing client with config: &{URL:http://localhost:7104 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc420189c20}
+2018/07/31 15:34:59 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420189c80 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/31 15:34:59 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420213880 DummyKeystore:<nil>}
+2018/07/31 15:34:59 [DEBUG] Client configuration settings: &{URL:http://localhost:7104 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc420189c20}
+2018/07/31 15:34:59 [DEBUG] Entered runRegister
+2018/07/31 15:34:59 [DEBUG] Initializing client with config: &{URL:http://localhost:7104 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.Amazon.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc420189c20}
+2018/07/31 15:34:59 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc420189c80 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/31 15:34:59 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc420213880 DummyKeystore:<nil>}
+2018/07/31 15:34:59 [DEBUG] Loading identity: keyFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp/keystore/key.pem, certFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Amazon.com/users/rootAdmin/msp/signcerts/cert.pem
+2018/07/31 15:34:59 [DEBUG] Register { Name:peer1.Amazon.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:34:59 [DEBUG] Adding token-based authorization header
+2018/07/31 15:34:59 [DEBUG] Sending request
 POST http://localhost:7104/register
 {"id":"peer1.Amazon.com","type":"user","secret":"secret","affiliation":"org1"}
-2018/06/26 17:06:58 [DEBUG] Received response
+2018/07/31 15:34:59 [DEBUG] Received response
 statusCode=201 (201 Created)
-2018/06/26 17:06:58 [DEBUG] Response body result: map[secret:secret]
-2018/06/26 17:06:58 [DEBUG] The register request completed successfully
+2018/07/31 15:34:59 [DEBUG] Response body result: map[secret:secret]
+2018/07/31 15:34:59 [DEBUG] The register request completed successfully
 Password: secret

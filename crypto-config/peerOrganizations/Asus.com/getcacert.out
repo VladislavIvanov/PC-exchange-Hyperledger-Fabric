@@ -1,3 +1,3 @@
-2018/06/26 17:06:56 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/fabric-ca-client-config.yaml
-2018/06/26 17:06:56 [INFO] Stored root CA certificate at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/msp/cacerts/localhost-7102.pem
-2018/06/26 17:06:56 [INFO] Stored intermediate CA certificates at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/msp/intermediatecerts/localhost-7102.pem
+2018/07/31 15:34:56 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/fabric-ca-client-config.yaml
+2018/07/31 15:34:56 [INFO] Stored root CA certificate at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/msp/cacerts/localhost-7102.pem
+2018/07/31 15:34:56 [INFO] Stored intermediate CA certificates at /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/msp/intermediatecerts/localhost-7102.pem

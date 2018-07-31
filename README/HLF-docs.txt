@@ -1,0 +1,94 @@
+Hyperledger Fabric Model:
+This section outlines the key design features woven into Hyperledger Fabric that fulfill its promise of a comprehensive,
+ yet customizable, enterprise blockchain solution:
+
+Assets — Asset definitions enable the exchange of almost anything with monetary value over the network, from whole foods
+to antique cars to currency futures.
+Chaincode — Chaincode execution is partitioned from transaction ordering, limiting the required levels of trust and
+verification across node types, and optimizing network scalability and performance.
+Ledger Features — The immutable, shared ledger encodes the entire transaction history for each channel, and includes
+SQL-like query capability for efficient auditing and dispute resolution.
+Privacy — Channels and private data collections enable private and confidential multi-lateral transactions that are
+usually required by competing businesses and regulated industries that exchange assets on a common network.
+Security & Membership Services — Permissioned membership provides a trusted blockchain network, where participants know
+that all transactions can be detected and traced by authorized regulators and auditors.
+Consensus — A unique approach to consensus enables the flexibility and scalability needed for the enterprise.
+
+HLF Network:
+Components of a Network
+A network consists of:
+
+Ledgers (one per channel – comprised of the blockchain and the state database)
+Smart contract(s) (aka chaincode)
+Peer nodes
+Ordering service(s)
+Channel(s)
+Fabric Certificate Authorities
+
+Consumers of Network Services
+Client applications owned by organizations
+Clients of Blockchain network administrators
+
+Identity
+What is an Identity?
+The different actors in a blockchain network include peers, orderers, client applications, administrators and more. Each
+ of these actors — active elements inside or outside a network able to consume services — has a digitial identity
+ encapsulated in an X.509 digital certificate. These identities really matter because they determine the exact permissions
+ over resources and access to information that actors have in a blockchain network.
+
+ A Simple Scenario to Explain the Use of an Identity
+ Imagine that you visit a supermarket to buy some groceries. At the checkout you see a sign that says that only Visa,
+ Mastercard and AMEX cards are accepted. If you try to pay with a different card — let’s call it an “ImagineCard” —
+ it doesn’t matter whether the card is authentic and you have sufficient funds in your account. It will be not be accepted.
+
+ Scenario
+
+ Having a valid credit card is not enough — it must also be accepted by the store! PKIs and MSPs work together in the
+ same way — a PKI provides a list of identities, and an MSP says which of these are members of a given organization that
+ participates in the network.
+
+ PKI certificate authorities and MSPs provide a similar combination of functionalities. A PKI is like a card provider —
+ it dispenses many different types of verifiable identities. An MSP, on the other hand, is like the list of card
+ providers accepted by the store, determining which identities are the trusted members (actors) of the store payment
+ network. MSPs turn verifiable identities into the members of a blockchain network.
+
+ What are PKIs?
+ A public key infrastructure (PKI) is a collection of internet technologies that provides secure communications in a
+ network. It’s PKI that puts the S in HTTPS — and if you’re reading this documentation on a web browser, you’re probably
+ using a PKI to make sure it comes from a verified source.
+
+ There are four key elements to PKI:
+
+ Digital Certificates
+ Public and Private Keys
+ Certificate Authorities
+ Certificate Revocation Lists
+
+ Digital Certificates
+ A digital certificate is a document which holds a set of attributes relating to the holder of the certificate. The most
+ common type of certificate is the one compliant with the X.509 standard, which allows the encoding of a party’s
+ identifying details in its structure.
+
+ Certificate Authorities
+ As you’ve seen, an actor or a node is able to participate in the blockchain network, via the means of a digital
+ identity issued for it by an authority trusted by the system. In the most common case, digital identities
+ (or simply identities) have the form of cryptographically validated digital certificates that comply with X.509
+ standard and are issued by a Certificate Authority (CA).
+
+Fabric CA
+It’s because CAs are so important that Fabric provides a built-in CA component to allow you to create CAs in the
+blockchain networks you form. This component — known as Fabric CA is a private root CA provider capable of managing
+digital identities of Fabric participants that have the form of X.509 certificates. Because Fabric CA is a custom CA
+targeting the Root CA needs of Fabric, it is inherently not capable of providing SSL certificates for general/automatic
+use in browsers. However, because some CA must be used to manage identity (even in a test environment), Fabric CA can be
+used to provide and manage certificates. It is also possible — and fully appropriate — to use a public/commerical root
+or intermediate CA to provide identification.
+
+Certificate Revocation Lists
+A Certificate Revocation List (CRL) is easy to understand — it’s just a list of references to certificates that a CA
+knows to be revoked for one reason or another. If you recall the store scenario, a CRL would be like a list of stolen
+credit cards.
+
+When a third party wants to verify another party’s identity, it first checks the issuing CA’s CRL to make sure that the
+certificate has not been revoked. A verifier doesn’t have to check the CRL, but if they don’t they run the risk of
+accepting a compromised identity.

@@ -1,0 +1,253 @@
+Hypeledger Fabric - Notes
+
+Enterprise distributed ledger based on blockhain technologies that use smart contracts to reinforce trust between parties which no trust each other.
+
+IBM Open source project one of most stable. Linux foundation takes the governance over it. Fasted growing linux foundation project ever.
+
+In HLF there is no mining, no such concept. Use different consensus algorithm.
+Ethereum - 1000tx per minute | HLF - 500 000tx per minute
+If you have to mint half a mil tx, you have to invest a lot of money. There is no mining.
+
+HL is distributed by design. There is no single place of failure. There is no single source ot truth.
+
+Every transaction is stored to Ledger - also distributed to all parties.
+
+We don't have limit where to use hyperledger. We can create any type of infrastructure.
+Only requirements is - the party to have network visibility. Doesn't matter through VPN/private network or whatever.
+HLF does not have any requirements about hardware, network infrastructure, additional software, security models ect.
+Not vulnerable about 51% attack - there is no mining.
+
+Real case:
+A and B - interacts each other
+A stored all transaction data and B too. With time there is a difference in 2 storage.
+And starts long settlement process.
+This process didn't scale.
+
+Another approach:
+All process and data to third party. This solve a lot of a problem, but cost a lot money.
+Inside verification party works humans they can corrupt information - main problem.
+
+Resolving:
+
+Each party has HL on its server. They are connected and share info. Inforced with smart contract.
+All parties shared the same data(have a copy of the data), automatically synchronized in real time. Nobody can alter the data.
+Update of data past through smart contract(chaincode).
+
+The three main components of Hyperledger Fabric are Fabric CA, Pear and Ordering Service.
+
+HLF is running using Docker - industry standard way for containerization.
+
+Fabric CA(Certificate Authority):
+Every operation inside HLF must be signed cryptographically.
+You can create Open SSL by yourself or from third party.
+The certificate is x509 standard.
+The certificate is the same that is used to make your side running https.
+Fabric CA is a high quality tool following the best cryptographic security standard in the world, that allow you to generates certificates.
+This certificates are per user. In certificate you can add attributes like roles, accounts number etc.
+This information is propagated to the system and the system have access to it and can make decision based on it.
+The official therm of generating certificate is enrollment.
+Fabric CA can be attach to active directory.
+You can chain of certificate root -> intermediate -> intermediate
+
+Peer:
+The place where the ledger and the blockchain is stored. You can have and need more than one peer.
+The peer can be part of many channels.
+It endorse any update of the ledger.
+All peers find each other and synchronize automatically.
+Every peer is absolutely the same as any other peer.
+
+Ordering service:
+Ordering service is the hard of the consensus algorithm. The hard of HLF.
+Has couple of roles - the main is to provide order of operations.
+Before anything is commited to ledger it has past through the OS.
+OS creates the blocks that will be part of the blockchain.
+The txs inside the blocks is in particular order.
+When a block is full, OS sent it to the peers and the peers blindly(have verification step, not correct terminology) applied to the ledger.
+SOLO Orderer - only for development and testing
+Apache Kafka - tool used in production
+Transition from SOLO to Kafka - code will be the same, the execution will be the same.
+SOLO has only one instance that is the problem.
+Apache Kafka has distributed OSs.
+
+All of Fabric CA, Peer, Ordering service run inside docker containers.
+
+Channels:
+Channels are the main way for data isolation. By creating a channel, you isolate who can see the data and with the policy,
+you can control later who can execute operations inside the channel.
+
+Channel has separate ledger.
+
+They are main way for data isolation.
+You can think for it like separate instance of HLF, completely independent.
+Every channel has different set of rules, policies, chaincode.
+
+Peer must have be part of at least one channel. But can be in many channels.
+When you create a peer, you have to join to particular channel. Trivial process.
+All the parties that are inside the channel must agree for every other party.
+Many peers to one channel.
+You can join/remove peers to the channel or even group of members.
+Create channel with config of member and after that join to the channel.
+
+Chaincode:
+
+Chaincode is a smart contract. It's application.
+It's a program that is written and the main responsibilities of that program is to read and update the ledger data.
+The only think that can be manipulate or read from the ledger and the Blockchain is the Chaincode.
+
+All business logic is inside the chaincode.
+When execute a operation SDK make a proper transaction and this tx is send to the peer and executing the chaincode.
+Complex chaincode written on go lang.
+
+Chaincode must be part of the channel.
+Ledger is inside the channel.
+Inside one channel you can have different chaincode.
+When you want to execute operation you say - operation on that channel, in that chaincode, with this param and this certif.
+
+Has to be installed to every single peer part of that channel.
+Chaincode work with ledger data and ledger data is inside the peer.
+The cc must be part of the peer.
+If you have 3 peers in channel and forgot to install cc in 1, it becomes useless.
+
+After installed it you have to instantiate it.
+Actually start the container with the chaincode - will make all the necessary connections, verifications etc
+And then this cc is ready to use.
+When instantiate it you have to provide a endorsement policy.
+When execute some operation, this operation has to be verified.
+You can create the policy that say: Before you update that I want every peer to verify that transaction, or majority, or majority + 1 specific or at least one.
+You can create any boolean expression logic with AND, OR.
+This policy can be changed. This policies are per chaincode.
+If you have a channel with 10 cc evert cc has different policy.
+
+How exactly Hyperledger Fabric works.
+
+We have 2 organisations with 3 peers each.
+Orgs are part of the same network and the same channel.
+
+So we have SDK(node.js, java, python, go).
+We execute some operation.
+We create the proper transaction - take the certificate from CA, embed proper attributes inside the certificate,
+provide arguments.
+This transaction is prepare from the SDK. It is called transaction proposal.
+
+This transaction is send to one or many peers.
+In this situation inside the ledger nothing is changed.
+The peers accept this proposal and simulate it.
+Execute it with current version of the ledger. Every peer has a different physical copy of the ledger, they are all synchronized.
+Simulation will be executed. The result will be Read-Write set. This particular kye was updated through the simulation and the new version is that.
+This is done on every single peer.
+
+The peers take the result and cryptographically sign it and other staff.
+And send back Endorsement response to the SDK.
+The endorsement response hold the cryptographic materials of the peer, of the transaction, and the Read-Write set.
+
+After that SDK collect all the endorsement responses from the peers.
+And also pack them in Invocation request. And also sign of this package with all endorsements with the key.
+This Invocation request is send to Orderer.
+
+Orderer verify all the cryptographic materials.
+Verify the policy, verify a lot of other things.
+We execute a particular chaincode on particular channel, and this cc has a particular policy.
+
+If orderer said that invocation request compare to policy is not valid - this will not commit to ledger, this will not change the state of the ledger.
+But the orderer will store that transaction in the blockchain, but will not update the state of the ledger.
+The oreder also verify the Read-Write set of every endorsement response. They must be the same.
+By definition you have same peers, with same ledger, the same data and we execute the same chaincode, so we have to have the same result.
+If the result is not the same - the orderer will say there is a mismatch in data, some peer is out of synch or is compromised, or something is wrong, so
+I will not invoke that request. But again will store inside the blockchain, so to be able to verified or odit it later.
+
+If the orderer say that the policy is correct.
+Then the orderer is sending the date to all the peers - Invocation.
+So it say I send a valid tx, please apply to the ledger and every single peer accept - applied the same Read-Write set, applied the same data.
+And all peer are in the same stage.
+
+Also the orderer is responsible for deciding which operation is first(order).
+
+There is orderer service in each organisation. This is the proper way for production.
+This OSs are synchronized. If some is corrupted there will have mismatch and stop the invocation.
+Protect the ledger, but will store transactions in blockchain.
+
+This model is able to prevent double spending problem quiet efficiently:
+When the simulation is executed you have the read-write set, but keys in which we execute that simulation is in that set and has version.
+Lets start with empty ledger.
+And add a vehicle this is an asset. We add all the properties the VIN number is a key.
+First appear of this key will be the version 1.
+Later on every update of the key(change ownership) the version will be increase with 1.
+So when the simulation is executed it stores the keys and their versions.
+In concurrent operations while we execute transaction with key with version 1 - start second transaction that update this key with key version 2.
+When the first operation is send to the peers through invocation - the peer will check the requested version from invocation and the current version of Read-Write set.
+So between the execution of first tx somebody update the key.
+So this tx is not valid, because is executed of previous value of the key.
+So the operation will be rejected, again it will be stored in the blockchain, but will not update the ledger state.
+This is how double spending problem is solved in HLF.
+
+Skip tech details like:
+Orderer can be SOLO(single service - dev) or Apache Kafka(prod). How they synchronized.
+Also Orderer has queue which is limit by transaction count or timeout.
+
+Summary: The SDK sends the Transaction proposal two one or more peers. The peers simulate it and give the result of the simulation.
+This results is back to SDK Endorsement response. All responses are combine cryptographically signed and send to the Orderer.
+Orderer verify the crypto signatures, verify that Read-Write sets of all endorsements responses are the same.
+And make invocation to peers to apply new ledger state.
+
+The orderer not execute every invocation request directly.
+There is a queue. The orderer collect transactions - 10, 100, 1000 depends on your needs.
+And when the txs are enough it packs all the txs in block.
+Cryptographycally sign this block and hole send it to the peers.
+
+Membership Service Providers(MSP)
+
+MSP is the set of cryptographic materials that define the organization by itself.
+Every peer needs this type of certificate.
+Not talking about certificate by the user - CA.
+The peer itself, the orderer itself needs this type of certificate - MSP.
+This certificate must share common properties which define the this peer is part of that organization.
+And this orderer is part of this organization.
+Only peers that are part of the same MSP can see each other, can communicate each other.
+Peers to be part of a organization is defined by properties inside MSP certificate.
+If you want to add a new peer you must to create MSP with properties which is related to proper organization.
+When you configure a channel, you have to say who is allowed to participate in that channel.
+What you put in channel configuration block is the public certificates for that network.
+Inside this config the channel has the public keys for all the membership providers that are allowed to enter inside this network.
+
+MSP is set of certificates that define who you are and in which network you are.
+
+Personal tips about Hyperledger Fabric
+
+Depending on your company makes a lot of sense to separate your responsibility.
+How you can run your network with peers with orderers, what configuration you have to use.
+How to configure composer, where it will be etc.
+This is part of the DevOps. It is not necessary your developers to know all ot this.
+
+Developers must understand how to use the SDK. How they can execute transaction.
+How to manage the certificates.
+
+About the developers that are using SDKs:
+When you execute a transaction it will return a result of a success, almost immediately.
+This result is the result of the simulation, that don't mean that operation is actually inside the ledger.
+The operation is inside the queue.
+The way that make us understand that transaction is inside the ledger is by attaching to the event system.
+When you prepare transaction you have transaction ID and you are listening for an event for this particular txID.
+And this event will be fired from the peer when it try to apply the information.
+When you receive success your operation is stored to ledger and every peer is synchronized.
+You have to rely on an eventing system.
+
+For the developers that are writing chaincode:
+Chaincode must be pure functions.
+In cc about the business logic you have to rely only on an arguments that are provided inside the transaction, certificate date,
+and the current state of the ledger.
+Really bad idea is to rely on files on the file system, network operations or some other non deterministic operations.
+Because this operations are related to particular peer.
+
+Example: If your logic require random number - you can not generate this random number inside the chaincode, because every peer
+will generate different random number.
+You can generate random tool in the SDK, and provide it as argument to chaincode.
+That mean pure function.
+
+You can put whatever you want inside the arguments.
+
+Example: If your business logic require to store big documents. HLF can work with that, its not an issue.
+If you store 100mb content and you have 10 peers, it will store in 10 places it will require 10 more space.
+Fix this case:
+You dont store the data, you create a cryptographic fingerprint ex. hash.
+Pass this string, and store tha data in one place ex. CDN and later you can make verification.
+You have to remember that data is replicated to every single peer.

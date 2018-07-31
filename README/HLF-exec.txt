@@ -1,0 +1,94 @@
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+One liner to stop / remove all of Docker containers:
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+
+NETWORK
+
+Now, let's start the network with:
+
+docker-compose -f docker-compose-pcxchg.yaml up -d      // docker-compose-pcxchg.yaml - This file sets up our network
+
+Confirm that each container is indeed running with:
+
+docker ps
+
+You can stop the network with:
+
+docker-compose -f docker-compose-pcxchg.yaml down
+
+USE execution scripts to:
+
+CREATING OF CA - ./crypto.sh
+SETUP - ORDERER(genesis.block) and setup CHANNELS - ./setup.sh
+SETUP NETWORK - create channels, join channels, update anchor transactions, install and initialize chaincodes to peer
+
+MAKE SOME TEST WITH:
+
+./create-pc.sh and ./query.sh
+
+To run NodeSDK
+
+
+mkdir certs
+cd certs
+cp <YOUR PCXCHG LOCATION>/crypto-config/peerOrganizations/Asus.com/users/Admin\@Asus.com/msp/admincerts/Admin\@Asus.com-cert.pem ./
+cp <YOUR PCXCHG LOCATION>/crypto-config/peerOrganizations/Asus.com/users/Admin\@Asus.com/msp/keystore/* ./
+
+cp /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/users/Admin\@Asus.com/msp/admincerts/Admin\@Asus.com-cert.pem ./
+cp /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/Asus.com/users/Admin\@Asus.com/msp/keystore/* ./
+
+
+Create a file AsusAdmin in  /producerApp/certs:
+
+
+{
+   "name": "AsusAdmin",
+   "mspid": "AsusMSP",
+   "roles": null,
+   "affiliation": "",
+   "enrollmentSecret": "",
+   "enrollment": {
+      "signingIdentity": "",
+      "identity": {
+         "certificate": ""
+      }
+   }
+}
+
+First, let us fill in the certificate field. Therefore, run in /producerApp/certs:
+
+
+awk '{printf "%s\\n", $0}' Admin\@Asus.com-cert.pem > AsusAdminFormatted.pem
+This awk command replaces newlines with \n.
+
+Open the AsusAdminFormatted.pem and copy-paste it into the certificate field of AsusAdmin file.
+
+We also need to fill in the signingIdentity field. This is the name of the file from  /Admin\@Asus.com/msp/keystore/ without any suffix. So in the end, the AsusAdmin file should look like:
+
+
+{
+   "name": "AsusAdmin",
+   "mspid": "AsusMSP",
+   "roles": null,
+   "affiliation": "",
+   "enrollmentSecret": "",
+   "enrollment": {
+      "signingIdentity": "dc3adc23b09245fa98e3b56f728be84be059bec48adaed61a14f0cf34a35ec9f",
+      "identity": {
+         "certificate": "-----BEGIN CERTIFICATE-----\nMIICATCCAaegAwIBAgIQT3v7o+p//03xnQfb9dB59zAKBggqhkjOPQQDAjBjMQsw\nCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy\nYW5jaXNjbzERMA8GA1UEChMIQXN1cy5jb20xFDASBgNVBAMTC2NhLkFzdXMuY29t\nMB4XDTE3MDgzMTE1MTU0NFoXDTI3MDgyOTE1MTU0NFowUzELMAkGA1UEBhMCVVMx\nEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBGcmFuY2lzY28xFzAV\nBgNVBAMMDkFkbWluQEFzdXMuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE\n5wuHvwyKJZViGZ/gaNE7KLIQ1WsL5DfonihuhKhq5hkk+w/UrW3vHBe/f+FCdqOp\nMYS+VXnMWODktgzdnKQWAaNNMEswDgYDVR0PAQH/BAQDAgeAMAwGA1UdEwEB/wQC\nMAAwKwYDVR0jBCQwIoAgX55VvJuXVkxZN4GHDAPB9Vlcnad1tturRilnAkiLhdsw\nCgYIKoZIzj0EAwIDSAAwRQIhAMhMFxHB1LvsRhFAc7CS4XhlCRCkn5MAo62ePd1O\nYPV0AiBqqjAQhRvCM/tN8l8VIXSajQqAZBqhI18xNrII5ZU5Ag==\n-----END CERTIFICATE-----\n"
+      }
+   }
+}
+Notice the \n inserted in the certificate field.
+
+Finally, we have to copy the private key into ~/.hfc-key-store/:
+
+
+cp ./dc3adc23b09245fa98e3b56f728be84be059bec48adaed61a14f0cf34a35ec9f_sk ~/.hfc-key-store/dc3adc23b09245fa98e3b56f728be84be059bec48adaed61a14f0cf34a35ec9f-priv
+Do not forget to adjust the name of the file with the name, or signingIdentity, of your private key above. Notice, we need to change the name suffix from _sk to -priv.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

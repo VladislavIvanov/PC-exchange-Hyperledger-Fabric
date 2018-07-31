@@ -1,22 +1,22 @@
-2018/06/26 17:07:01 [DEBUG] Home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin
-2018/06/26 17:07:01 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/fabric-ca-client-config.yaml
-2018/06/26 17:07:01 [DEBUG] Checking for enrollment
-2018/06/26 17:07:01 [DEBUG] Initializing client with config: &{URL:http://localhost:7106 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca50}
-2018/06/26 17:07:01 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201acab0 PluginOpts:<nil> Pkcs11Opts:<nil>}
-2018/06/26 17:07:01 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201bb4c0 DummyKeystore:<nil>}
-2018/06/26 17:07:01 [DEBUG] Client configuration settings: &{URL:http://localhost:7106 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca50}
-2018/06/26 17:07:01 [DEBUG] Entered runRegister
-2018/06/26 17:07:01 [DEBUG] Initializing client with config: &{URL:http://localhost:7106 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201aca50}
-2018/06/26 17:07:01 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201acab0 PluginOpts:<nil> Pkcs11Opts:<nil>}
-2018/06/26 17:07:01 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201bb4c0 DummyKeystore:<nil>}
-2018/06/26 17:07:01 [DEBUG] Loading identity: keyFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp/keystore/key.pem, certFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp/signcerts/cert.pem
-2018/06/26 17:07:01 [DEBUG] Register { Name:peer1.HP.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
-2018/06/26 17:07:01 [DEBUG] Adding token-based authorization header
-2018/06/26 17:07:01 [DEBUG] Sending request
+2018/07/31 15:35:01 [DEBUG] Home directory: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin
+2018/07/31 15:35:01 [INFO] Configuration file location: /Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/fabric-ca-client-config.yaml
+2018/07/31 15:35:01 [DEBUG] Checking for enrollment
+2018/07/31 15:35:01 [DEBUG] Initializing client with config: &{URL:http://localhost:7106 MSPDir:msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201cab10}
+2018/07/31 15:35:01 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201cab70 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/31 15:35:01 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201d7f50 DummyKeystore:<nil>}
+2018/07/31 15:35:02 [DEBUG] Client configuration settings: &{URL:http://localhost:7106 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201cab10}
+2018/07/31 15:35:02 [DEBUG] Entered runRegister
+2018/07/31 15:35:02 [DEBUG] Initializing client with config: &{URL:http://localhost:7106 MSPDir:/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** Profile: Label: CSR:<nil> CAName: AttrReqs:[]  } CSR:{CN:admin Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[Vladislavs-MacBook-Pro.local] KeyRequest:<nil> CA:<nil> SerialNumber:} ID:{Name:peer1.HP.com Type:user Secret:secret MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:} Revoke:{Name: Serial: AKI: Reason: CAName: GenCRL:false} CAInfo:{CAName:} CAName: CSP:0xc4201cab10}
+2018/07/31 15:35:02 [DEBUG] Initializing BCCSP: &{ProviderName:SW SwOpts:0xc4201cab70 PluginOpts:<nil> Pkcs11Opts:<nil>}
+2018/07/31 15:35:02 [DEBUG] Initializing BCCSP with software options &{SecLevel:256 HashFamily:SHA2 Ephemeral:false FileKeystore:0xc4201d7f50 DummyKeystore:<nil>}
+2018/07/31 15:35:02 [DEBUG] Loading identity: keyFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp/keystore/key.pem, certFile=/Users/vladislavivanov/HLF/pcxchg/crypto-config/peerOrganizations/HP.com/users/rootAdmin/msp/signcerts/cert.pem
+2018/07/31 15:35:02 [DEBUG] Register { Name:peer1.HP.com Type:user Secret:**** MaxEnrollments:0 Affiliation:org1 Attributes:[] CAName:  }
+2018/07/31 15:35:02 [DEBUG] Adding token-based authorization header
+2018/07/31 15:35:02 [DEBUG] Sending request
 POST http://localhost:7106/register
 {"id":"peer1.HP.com","type":"user","secret":"secret","affiliation":"org1"}
-2018/06/26 17:07:01 [DEBUG] Received response
+2018/07/31 15:35:02 [DEBUG] Received response
 statusCode=201 (201 Created)
-2018/06/26 17:07:01 [DEBUG] Response body result: map[secret:secret]
-2018/06/26 17:07:01 [DEBUG] The register request completed successfully
+2018/07/31 15:35:02 [DEBUG] Response body result: map[secret:secret]
+2018/07/31 15:35:02 [DEBUG] The register request completed successfully
 Password: secret
